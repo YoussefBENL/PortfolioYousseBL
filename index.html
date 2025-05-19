@@ -136,27 +136,34 @@
     </div>
   </div>
 </section>
+<!-- Modal CV -->
+<div id="modalCV" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+  <div class="bg-zinc-900 p-6 rounded max-w-4xl w-full relative">
+    <button onclick="closeModal('modalCV')" class="absolute top-2 right-2 text-white text-xl">✖</button>
+    <h3 class="text-2xl font-bold mb-4 text-white">Mon CV</h3>
+    <iframe src="CV_BEN-LTAIEF_Youssef.pdf" class="w-full h-[80vh] rounded" frameborder="0"></iframe>
+  </div>
+</div>
+<section id="contact" class="text-center">
+  <h2 class="text-3xl font-bold mb-6">Contact</h2>
 
-<section id="contact">
-  <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
-    <h2 class="text-3xl font-bold">Contact</h2>
-    <div class="flex gap-4">
-      <a href="CV_BEN-LTAIEF_Youssef.pdf" target="_blank" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">
-        Visualiser le CV
-      </a>
-      <a href="CV_BEN-LTAIEF_Youssef.pdf" download class="bg-green-600 px-4 py-2 rounded hover:bg-green-700">
-        Télécharger le CV
-      </a>
+  <div class="flex flex-col items-center space-y-6">
+    <form action="https://formspree.io/f/mzzrwegn" method="POST" class="space-y-4 w-full max-w-xl">
+      <input type="text" name="name" placeholder="Votre nom" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
+      <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
+      <textarea name="message" placeholder="Votre message" required rows="5" class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white"></textarea>
+      <button type="submit" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Envoyer</button>
+    </form>
+
+    <!-- Boutons CV centrés -->
+    <div class="flex flex-col sm:flex-row gap-4">
+      <button onclick="openModal('modalCV')" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Visualiser mon CV</button>
+      <a href="CV_BEN-LTAIEF_Youssef.pdf" download class="bg-green-600 px-4 py-2 rounded hover:bg-green-700">Télécharger mon CV</a>
     </div>
   </div>
-
-  <form action="https://formspree.io/f/mzzrwegn" method="POST" class="space-y-4 max-w-xl">
-    <input type="text" name="name" placeholder="Votre nom" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
-    <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
-    <textarea name="message" placeholder="Votre message" required rows="5" class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white"></textarea>
-    <button type="submit" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Envoyer</button>
-  </form>
 </section>
+
+  <script>
     function openModal(id) {
       document.getElementById(id).classList.remove("hidden");
     }
