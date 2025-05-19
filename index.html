@@ -34,17 +34,17 @@
       <h2 class="text-3xl font-bold mb-6">Mes projets</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div onclick="openModal('modal1')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
-          <img src="https://i.imgur.com/h4WvMGH.png" alt="Projet 1" class="rounded mb-2">
+          <img src="enquetepoleculture.png" alt="Projet 1" class="rounded mb-2">
           <h3 class="font-semibold text-lg">Enquête sur le pôle culture</h3>
           <p class="text-sm text-zinc-300">Création de questionnaire, nettoyage et analyse Excel.</p>
         </div>
         <div onclick="openModal('modal2')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
-          <img src="https://i.imgur.com/bLU9vDb.png" alt="Projet 2" class="rounded mb-2">
+          <img src="excel.png" alt="Projet 2" class="rounded mb-2">
           <h3 class="font-semibold text-lg">Analyse pour une boutique de location</h3>
           <p class="text-sm text-zinc-300">SQL, TCD Excel, tendances business.</p>
         </div>
         <div onclick="openModal('modal3')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
-          <img src="https://i.imgur.com/oe0P0OE.png" alt="Projet 3" class="rounded mb-2">
+          <img src="Python-programming.jpg" alt="Projet 3" class="rounded mb-2">
           <h3 class="font-semibold text-lg">Traitement de fichiers texte</h3>
           <p class="text-sm text-zinc-300">Python pour restructurer des fichiers textes.</p>
         </div>
@@ -52,7 +52,7 @@
 
       <!-- Modals -->
       <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-zinc-900 p-6 rounded w-full max-w-md md:max-w-xl lg:max-w-3xl relative">
+        <div class="bg-zinc-900 p-6 rounded max-w-3xl w-full relative">
           <button onclick="closeModal('modal1')" class="absolute top-2 right-2 text-white">✖</button>
           <h3 class="text-2xl font-bold mb-2">Enquête sur le pôle culture</h3>
           <div class="space-y-3 text-zinc-300">
@@ -74,7 +74,7 @@
       </div>
 
       <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-zinc-900 p-6 rounded w-full max-w-md md:max-w-xl lg:max-w-3xl relative">
+        <div class="bg-zinc-900 p-6 rounded max-w-3xl w-full relative">
           <button onclick="closeModal('modal2')" class="absolute top-2 right-2 text-white">✖</button>
           <h3 class="text-2xl font-bold mb-2">Analyse pour une boutique de location</h3>
           <ul class="list-disc pl-6 space-y-2 text-zinc-300">
@@ -87,7 +87,7 @@
       </div>
 
       <div id="modal3" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-zinc-900 p-6 rounded w-full max-w-md md:max-w-xl lg:max-w-3xl relative">
+        <div class="bg-zinc-900 p-6 rounded max-w-3xl w-full relative">
           <button onclick="closeModal('modal3')" class="absolute top-2 right-2 text-white">✖</button>
           <h3 class="text-2xl font-bold mb-2">Traitement de fichiers texte</h3>
           <ul class="list-disc pl-6 space-y-2 text-zinc-300">
@@ -98,19 +98,44 @@
       </div>
     </section>
 
-    <section id="competences">
-      <h2 class="text-3xl font-bold mb-6">Compétences</h2>
+<section id="competences">
+  <h2 class="text-3xl font-bold mb-6">Compétences</h2>
+  
+  <div class="space-y-8">
+    <!-- Outils -->
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Outils</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <span class="bg-zinc-800 py-2 px-4 rounded">Python</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">SQL</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Tableau</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Excel</span>
         <span class="bg-zinc-800 py-2 px-4 rounded">Power BI</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Excel avancé</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Visualisation</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Statistiques</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Modèles prédictifs</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">DAX / Power Query</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Access</span>
       </div>
-    </section>
+    </div>
+
+    <!-- Programmation -->
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Programmation</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <span class="bg-zinc-800 py-2 px-4 rounded">SQL</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Python</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">SAS</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">R</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">VBA</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">DAX</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Power Query</span>
+      </div>
+    </div>
+
+    <!-- Cloud -->
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Cloud</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <span class="bg-zinc-800 py-2 px-4 rounded">Microsoft Azure</span>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="contact">
       <h2 class="text-3xl font-bold mb-6">Contact</h2>
