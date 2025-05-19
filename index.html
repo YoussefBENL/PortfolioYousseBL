@@ -6,9 +6,11 @@
   <title>Youssef Ben Ltaief - Data Analyst Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    function toggleProject(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("hidden");
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add("hidden");
     }
   </script>
 </head>
@@ -24,6 +26,7 @@
         <a href="#projets" class="hover:text-blue-400">Projets</a>
         <a href="#competences" class="hover:text-blue-400">Compétences</a>
         <a href="#contact" class="hover:text-blue-400">Contact</a>
+        <a href="https://github.com" target="_blank" class="hover:text-blue-400">GitHub</a>
       </nav>
     </div>
   </header>
@@ -37,20 +40,45 @@
     <section id="projets">
       <h2 class="text-3xl font-bold mb-6">Mes projets</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="bg-zinc-800 p-4 rounded shadow">
+        <div onclick="openModal('modal1')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
           <img src="https://i.imgur.com/h4WvMGH.png" alt="Projet 1" class="rounded mb-2">
           <h3 class="font-semibold text-lg">Enquête sur le pôle culture</h3>
-          <p class="text-sm text-zinc-300">Création de questionnaire, nettoyage et analyse Excel. Rapport graphique collaboratif.</p>
+          <p class="text-sm text-zinc-300">Création de questionnaire, nettoyage et analyse Excel.</p>
         </div>
-        <div class="bg-zinc-800 p-4 rounded shadow">
+        <div onclick="openModal('modal2')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
           <img src="https://i.imgur.com/bLU9vDb.png" alt="Projet 2" class="rounded mb-2">
           <h3 class="font-semibold text-lg">Analyse pour une boutique de location</h3>
-          <p class="text-sm text-zinc-300">SQL, Excel (TCD + MFC), visualisation et extraction de tendances business.</p>
+          <p class="text-sm text-zinc-300">SQL, TCD Excel, tendances business.</p>
         </div>
-        <div class="bg-zinc-800 p-4 rounded shadow">
+        <div onclick="openModal('modal3')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
           <img src="https://i.imgur.com/oe0P0OE.png" alt="Projet 3" class="rounded mb-2">
           <h3 class="font-semibold text-lg">Traitement de fichiers texte</h3>
-          <p class="text-sm text-zinc-300">Python pour nettoyer et restructurer un fichier texte brut dans Excel.</p>
+          <p class="text-sm text-zinc-300">Python pour restructurer des fichiers textes.</p>
+        </div>
+      </div>
+
+      <!-- Modals -->
+      <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="bg-zinc-900 p-6 rounded max-w-lg relative">
+          <button onclick="closeModal('modal1')" class="absolute top-2 right-2 text-white">✖</button>
+          <h3 class="text-2xl font-bold mb-2">Enquête sur le pôle culture</h3>
+          <p class="text-sm text-zinc-300">Création d’un questionnaire via LimeSurvey, diffusion sur les campus, nettoyage et analyse sous Excel. Rapport avec graphiques. Travail d’équipe de 5 personnes.</p>
+        </div>
+      </div>
+
+      <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="bg-zinc-900 p-6 rounded max-w-lg relative">
+          <button onclick="closeModal('modal2')" class="absolute top-2 right-2 text-white">✖</button>
+          <h3 class="text-2xl font-bold mb-2">Analyse pour une boutique de location</h3>
+          <p class="text-sm text-zinc-300">Requêtes SQL (JOIN, SELECT…), TCD dans Excel, mise en forme conditionnelle, analyse des tendances significatives.</p>
+        </div>
+      </div>
+
+      <div id="modal3" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="bg-zinc-900 p-6 rounded max-w-lg relative">
+          <button onclick="closeModal('modal3')" class="absolute top-2 right-2 text-white">✖</button>
+          <h3 class="text-2xl font-bold mb-2">Traitement de fichiers texte</h3>
+          <p class="text-sm text-zinc-300">Utilisation de Python pour lire, nettoyer et structurer des fichiers texte bruts. Organisation finale dans Excel pour analyse.</p>
         </div>
       </div>
     </section>
@@ -58,21 +86,20 @@
     <section id="competences">
       <h2 class="text-3xl font-bold mb-6">Compétences</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <span class="bg-zinc-800 py-2 px-4 rounded">Excel</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">SQL</span>
         <span class="bg-zinc-800 py-2 px-4 rounded">Python</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">SQL</span>
         <span class="bg-zinc-800 py-2 px-4 rounded">Power BI</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">R</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Excel avancé</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Visualisation</span>
         <span class="bg-zinc-800 py-2 px-4 rounded">Statistiques</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Modélisation</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Azure</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Modèles prédictifs</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">DAX / Power Query</span>
       </div>
     </section>
 
     <section id="contact">
       <h2 class="text-3xl font-bold mb-6">Contact</h2>
-      <form name="contact" method="POST" data-netlify="true" class="space-y-4 max-w-xl">
-        <input type="hidden" name="form-name" value="contact">
+      <form action="https://formspree.io/f/xwkgrkpl" method="POST" class="space-y-4 max-w-xl">
         <input type="text" name="name" placeholder="Votre nom" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
         <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
         <textarea name="message" placeholder="Votre message" required rows="5" class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white"></textarea>
