@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Youssef Ben Ltaief</title>
+  <title>Youssef Ben Ltaief - Data Analyst Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     function toggleProject(id) {
@@ -12,112 +12,76 @@
     }
   </script>
 </head>
-<body class="bg-gradient-to-br from-gray-100 via-blue-100 to-blue-200 text-gray-900 min-h-screen">
-  <header class="bg-white shadow p-6 sticky top-0 z-10">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-bold">Youssef Ben Ltaief</h1>
-        <p class="text-sm text-gray-600">📍 Massy · <a href="mailto:bentaief.youssef@gmail.com" class="text-blue-500">bentaief.youssef@gmail.com</a></p>
+<body class="bg-zinc-900 text-white font-sans">
+  <header class="bg-zinc-800 p-6 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <img src="/mnt/data/6241059f-a162-4838-977c-4f70a5a72c43.png" alt="photo Youssef" class="h-12 w-12 rounded-full border border-white object-cover" />
+        <h1 class="text-2xl font-bold">Youssef Ben Ltaief</h1>
       </div>
-      <nav class="space-x-4">
-        <a href="#projets" class="text-blue-600 hover:underline">Projets</a>
-        <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
-        <a href="CV_BEN-LTAIEF_Youssef.pdf" download class="text-blue-600 hover:underline">Télécharger CV</a>
+      <nav class="flex space-x-6 text-sm">
+        <a href="#about" class="hover:text-blue-400">À propos</a>
+        <a href="#projets" class="hover:text-blue-400">Projets</a>
+        <a href="#competences" class="hover:text-blue-400">Compétences</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto p-6 space-y-12">
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">À propos</h2>
-      <p>Actuellement en BUT Sciences des Données, je recherche une alternance de 2 ans pour contribuer à des projets concrets en data analyse. À l’aise avec Excel, Python, SQL, Power BI et R, je suis rigoureux, curieux et motivé.</p>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Compétences techniques</h2>
-      <ul class="list-disc list-inside">
-        <li>Outils : Excel, Power BI, Tableau, Access</li>
-        <li>Programmation : Python, R, SQL, SAS, VBA, DAX</li>
-        <li>Cloud : Microsoft Azure</li>
-        <li>Statistiques, probabilités, modélisation</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Soft Skills</h2>
-      <ul class="list-disc list-inside">
-        <li>Esprit analytique</li>
-        <li>Curieux</li>
-        <li>Travail en équipe</li>
-        <li>Communication claire</li>
-      </ul>
+  <main class="max-w-6xl mx-auto px-6 py-10 space-y-20">
+    <section id="about">
+      <h2 class="text-3xl font-bold mb-4">Étudiant en Data Science</h2>
+      <p class="text-lg max-w-3xl">Bonjour, je suis Youssef et je vous souhaite la bienvenue sur mon portfolio ! Actuellement en BUT Sciences des Données à l’Université Paris Cité, je suis à la recherche d’une alternance de 2 ans dans le domaine de la data. J'aime explorer, analyser et transformer les données en solutions concrètes grâce à des outils comme Python, SQL, Power BI, Excel, etc.</p>
     </section>
 
     <section id="projets">
-      <h2 class="text-2xl font-semibold mb-4">Projets</h2>
-      <div class="space-y-4">
-        <div>
-          <button onclick="toggleProject('proj1')" class="text-blue-600 underline">Enquête sur le pôle culture (Nov 2024 - Jan 2025)</button>
-          <div id="proj1" class="hidden ml-4 mt-2">
-            <ul class="list-disc list-inside text-sm">
-              <li>Questionnaire sur LimeSurvey et collecte terrain</li>
-              <li>Nettoyage et analyse des réponses sous Excel</li>
-              <li>Rapport synthétique avec graphiques</li>
-            </ul>
-          </div>
+      <h2 class="text-3xl font-bold mb-6">Mes projets</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-zinc-800 p-4 rounded shadow">
+          <img src="https://i.imgur.com/h4WvMGH.png" alt="Projet 1" class="rounded mb-2">
+          <h3 class="font-semibold text-lg">Enquête sur le pôle culture</h3>
+          <p class="text-sm text-zinc-300">Création de questionnaire, nettoyage et analyse Excel. Rapport graphique collaboratif.</p>
         </div>
-
-        <div>
-          <button onclick="toggleProject('proj2')" class="text-blue-600 underline">Analyses pour une boutique de location (Nov 2024)</button>
-          <div id="proj2" class="hidden ml-4 mt-2">
-            <ul class="list-disc list-inside text-sm">
-              <li>SQL (JOIN, SELECT) sur base relationnelle</li>
-              <li>Tableaux de bord avec TCD et MFC sous Excel</li>
-              <li>Identification de tendances clés</li>
-            </ul>
-          </div>
+        <div class="bg-zinc-800 p-4 rounded shadow">
+          <img src="https://i.imgur.com/bLU9vDb.png" alt="Projet 2" class="rounded mb-2">
+          <h3 class="font-semibold text-lg">Analyse pour une boutique de location</h3>
+          <p class="text-sm text-zinc-300">SQL, Excel (TCD + MFC), visualisation et extraction de tendances business.</p>
         </div>
-
-        <div>
-          <button onclick="toggleProject('proj3')" class="text-blue-600 underline">Traitement de fichiers texte (Déc 2024)</button>
-          <div id="proj3" class="hidden ml-4 mt-2">
-            <ul class="list-disc list-inside text-sm">
-              <li>Nettoyage de données avec Python</li>
-              <li>Structuration dans Excel</li>
-            </ul>
-          </div>
+        <div class="bg-zinc-800 p-4 rounded shadow">
+          <img src="https://i.imgur.com/oe0P0OE.png" alt="Projet 3" class="rounded mb-2">
+          <h3 class="font-semibold text-lg">Traitement de fichiers texte</h3>
+          <p class="text-sm text-zinc-300">Python pour nettoyer et restructurer un fichier texte brut dans Excel.</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Langues & Intérêts</h2>
-      <p>Langues : Arabe (natif), Anglais (B2), Espagnol (A2)</p>
-      <p>Centres d’intérêt : Judo, Bricolage</p>
+    <section id="competences">
+      <h2 class="text-3xl font-bold mb-6">Compétences</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <span class="bg-zinc-800 py-2 px-4 rounded">Excel</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">SQL</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Python</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Power BI</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">R</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Statistiques</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Modélisation</span>
+        <span class="bg-zinc-800 py-2 px-4 rounded">Azure</span>
+      </div>
     </section>
 
     <section id="contact">
-      <h2 class="text-2xl font-semibold mb-4">Me contacter</h2>
-      <form class="space-y-4" name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
-        <div>
-          <label class="block text-sm font-medium">Nom</label>
-          <input type="text" name="name" required class="w-full border rounded p-2" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Email</label>
-          <input type="email" name="email" required class="w-full border rounded p-2" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Message</label>
-          <textarea name="message" required class="w-full border rounded p-2"></textarea>
-        </div>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Envoyer</button>
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <form name="contact" method="POST" data-netlify="true" class="space-y-4 max-w-xl">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="name" placeholder="Votre nom" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
+        <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
+        <textarea name="message" placeholder="Votre message" required rows="5" class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white"></textarea>
+        <button type="submit" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Envoyer</button>
       </form>
     </section>
   </main>
 
-  <footer class="bg-white border-t mt-12 p-6 text-center text-sm text-gray-500">
+  <footer class="bg-zinc-800 text-center text-sm p-6 mt-12 text-zinc-400">
     © 2025 Youssef Ben Ltaief. Tous droits réservés.
   </footer>
 </body>
