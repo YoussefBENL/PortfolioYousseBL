@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Youssef Ben Ltaief</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleProject(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="bg-white shadow p-6">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-3xl font-bold">Youssef Ben Ltaief</h1>
+      <p class="text-lg">Étudiant en Data Science à l’Université Paris Cité</p>
+      <p class="text-sm text-gray-600">📍 Massy (91300) · 📧 <a href="mailto:bentaief.youssef@gmail.com" class="text-blue-500">bentaief.youssef@gmail.com</a> · <a href="https://www.linkedin.com/in/youssef-ben-ltaief-806738352/" class="text-blue-500" target="_blank">LinkedIn</a></p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">À propos</h2>
+      <p>Actuellement en BUT Sciences des Données, je recherche une alternance de 2 ans pour contribuer à des projets concrets en data analyse. À l’aise avec Excel, Python, SQL, Power BI et R, je suis rigoureux, curieux et motivé.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Compétences techniques</h2>
+      <ul class="list-disc list-inside">
+        <li>Outils : Excel, Power BI, Tableau, Access</li>
+        <li>Programmation : Python, R, SQL, SAS, VBA, DAX</li>
+        <li>Cloud : Microsoft Azure</li>
+        <li>Statistiques, probabilités, modélisation</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Soft Skills</h2>
+      <ul class="list-disc list-inside">
+        <li>Esprit analytique</li>
+        <li>Curieux</li>
+        <li>Travail en équipe</li>
+        <li>Communication claire</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Projets</h2>
+      <div class="space-y-4">
+        <div>
+          <button onclick="toggleProject('proj1')" class="text-blue-600 underline">Enquête sur le pôle culture (Nov 2024 - Jan 2025)</button>
+          <div id="proj1" class="hidden ml-4 mt-2">
+            <ul class="list-disc list-inside text-sm">
+              <li>Questionnaire sur LimeSurvey et collecte terrain</li>
+              <li>Nettoyage et analyse des réponses sous Excel</li>
+              <li>Rapport synthétique avec graphiques</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <button onclick="toggleProject('proj2')" class="text-blue-600 underline">Analyses pour une boutique de location (Nov 2024)</button>
+          <div id="proj2" class="hidden ml-4 mt-2">
+            <ul class="list-disc list-inside text-sm">
+              <li>SQL (JOIN, SELECT) sur base relationnelle</li>
+              <li>Tableaux de bord avec TCD et MFC sous Excel</li>
+              <li>Identification de tendances clés</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <button onclick="toggleProject('proj3')" class="text-blue-600 underline">Traitement de fichiers texte (Déc 2024)</button>
+          <div id="proj3" class="hidden ml-4 mt-2">
+            <ul class="list-disc list-inside text-sm">
+              <li>Nettoyage de données avec Python</li>
+              <li>Structuration dans Excel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Langues & Intérêts</h2>
+      <p>Langues : Arabe (natif), Anglais (B2), Espagnol (A2)</p>
+      <p>Centres d’intérêt : Judo, Bricolage</p>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t mt-12 p-6 text-center text-sm text-gray-500">
+    © 2025 Youssef Ben Ltaief. Tous droits réservés.
+  </footer>
+</body>
+</html>
