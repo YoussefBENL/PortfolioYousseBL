@@ -2,60 +2,69 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Youssef Ben Ltaief - Data Analyst Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Youssef Ben Ltaief - Portfolio Bleu Foncé</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add("hidden");
+    }
+  </script>
 </head>
-<body class="bg-zinc-900 text-white font-sans">
-  <header class="bg-zinc-800 p-6 shadow-md sticky top-0 z-50">
+<body class="bg-blue-200 text-blue-900 font-sans">
+  <header class="bg-white p-6 shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <div class="flex items-center gap-4">
-        <img src="/mnt/data/6241059f-a162-4838-977c-4f70a5a72c43.png" alt="photo Youssef" class="h-12 w-12 rounded-full border border-white object-cover" />
+        <img src="/mnt/data/6241059f-a162-4838-977c-4f70a5a72c43.png" alt="photo Youssef" class="h-12 w-12 rounded-full border border-blue-900 object-cover" />
         <h1 class="text-2xl font-bold">Youssef Ben Ltaief</h1>
       </div>
       <nav class="flex space-x-6 text-sm">
-        <a href="#about" class="hover:text-blue-400">À propos</a>
-        <a href="#projets" class="hover:text-blue-400">Projets</a>
-        <a href="#competences" class="hover:text-blue-400">Compétences</a>
-        <a href="#contact" class="hover:text-blue-400">Contact</a>
+        <a href="#about" class="hover:text-blue-800 transition">À propos</a>
+        <a href="#projets" class="hover:text-blue-800 transition">Projets</a>
+        <a href="#competences" class="hover:text-blue-800 transition">Compétences</a>
+        <a href="#cv" class="hover:text-blue-800 transition">CV</a>
+        <a href="#contact" class="hover:text-blue-800 transition">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-6 py-10 space-y-20">
-    <section id="about">
+    <section id="about" class="bg-white shadow-md rounded p-6">
       <h2 class="text-3xl font-bold mb-4">Étudiant en Data Science</h2>
       <p class="text-lg max-w-3xl">
         Bonjour, je suis Youssef et je vous souhaite la bienvenue sur mon portfolio ! Actuellement en BUT Sciences des Données à l’Université Paris Cité, je suis à la recherche d’une alternance de 2 ans dans le domaine de la data. J'aime explorer, analyser et transformer les données en solutions concrètes grâce à des outils comme Python, SQL, Power BI, Excel, etc.
       </p>
     </section>
 
-    <section id="projets">
+    <section id="projets" class="bg-white shadow-md rounded p-6">
       <h2 class="text-3xl font-bold mb-6">Mes projets</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div onclick="openModal('modal1')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
-          <img src="enquetepoleculture.png" alt="Projet 1" class="rounded mb-2">
+        <div onclick="openModal('modal1')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <img src="https://i.imgur.com/h4WvMGH.png" alt="Projet 1" class="rounded mb-2" />
           <h3 class="font-semibold text-lg">Enquête sur le pôle culture</h3>
-          <p class="text-sm text-zinc-300">Création de questionnaire, nettoyage et analyse Excel.</p>
+          <p class="text-sm text-blue-900">Création de questionnaire, nettoyage et analyse Excel.</p>
         </div>
-        <div onclick="openModal('modal2')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
-          <img src="excel.png" alt="Projet 2" class="rounded mb-2">
+        <div onclick="openModal('modal2')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <img src="https://i.imgur.com/bLU9vDb.png" alt="Projet 2" class="rounded mb-2" />
           <h3 class="font-semibold text-lg">Analyse pour une boutique de location</h3>
-          <p class="text-sm text-zinc-300">SQL, TCD Excel, tendances business.</p>
+          <p class="text-sm text-blue-900">SQL, TCD Excel, tendances business.</p>
         </div>
-        <div onclick="openModal('modal3')" class="cursor-pointer bg-zinc-800 p-4 rounded shadow hover:ring-2 hover:ring-blue-600">
-          <img src="Python-programming.jpg" alt="Projet 3" class="rounded mb-2">
+        <div onclick="openModal('modal3')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <img src="https://i.imgur.com/oe0P0OE.png" alt="Projet 3" class="rounded mb-2" />
           <h3 class="font-semibold text-lg">Traitement de fichiers texte</h3>
-          <p class="text-sm text-zinc-300">Python pour restructurer des fichiers textes.</p>
+          <p class="text-sm text-blue-900">Python pour restructurer des fichiers textes.</p>
         </div>
       </div>
 
       <!-- Modals -->
       <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-zinc-900 p-6 rounded max-w-3xl w-full relative">
-          <button onclick="closeModal('modal1')" class="absolute top-2 right-2 text-white">✖</button>
+        <div class="bg-white p-6 rounded max-w-lg relative max-h-[90vh] overflow-auto text-blue-900">
+          <button onclick="closeModal('modal1')" class="absolute top-2 right-2 text-blue-900 text-xl font-bold">✖</button>
           <h3 class="text-2xl font-bold mb-2">Enquête sur le pôle culture</h3>
-          <div class="space-y-3 text-zinc-300">
+          <div class="space-y-3">
             <p class="text-lg">Enquête : Conception d’un questionnaire et diffusion via la messagerie universitaire, complétée par une collecte physique sur les campus.</p>
             <p class="text-lg">Traitement des données :</p>
             <ul class="list-disc pl-6 space-y-2">
@@ -74,10 +83,10 @@
       </div>
 
       <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-zinc-900 p-6 rounded max-w-3xl w-full relative">
-          <button onclick="closeModal('modal2')" class="absolute top-2 right-2 text-white">✖</button>
+        <div class="bg-white p-6 rounded max-w-lg relative max-h-[90vh] overflow-auto text-blue-900">
+          <button onclick="closeModal('modal2')" class="absolute top-2 right-2 text-blue-900 text-xl font-bold">✖</button>
           <h3 class="text-2xl font-bold mb-2">Analyse pour une boutique de location</h3>
-          <ul class="list-disc pl-6 space-y-2 text-zinc-300">
+          <ul class="list-disc pl-6 space-y-2">
             <li>Nettoyage et structuration des données dans Excel</li>
             <li>Suivi de 5 KPI : CA, répartition films, fréquence location, volume transactions, taux de réachat</li>
             <li>Requêtes SQL</li>
@@ -87,10 +96,10 @@
       </div>
 
       <div id="modal3" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-zinc-900 p-6 rounded max-w-3xl w-full relative">
-          <button onclick="closeModal('modal3')" class="absolute top-2 right-2 text-white">✖</button>
+        <div class="bg-white p-6 rounded max-w-lg relative max-h-[90vh] overflow-auto text-blue-900">
+          <button onclick="closeModal('modal3')" class="absolute top-2 right-2 text-blue-900 text-xl font-bold">✖</button>
           <h3 class="text-2xl font-bold mb-2">Traitement de fichiers texte</h3>
-          <ul class="list-disc pl-6 space-y-2 text-zinc-300">
+          <ul class="list-disc pl-6 space-y-2">
             <li>Utilisation de Python pour lire, nettoyer et structurer des fichiers texte bruts</li>
             <li>Organisation finale dans un Excel pour analyse</li>
           </ul>
@@ -98,7 +107,7 @@
       </div>
     </section>
 
-<section id="competences">
+<section id="competences" class="bg-white text-blue-900 shadow-md rounded p-6">
   <h2 class="text-3xl font-bold mb-6">Compétences</h2>
   
   <div class="space-y-8">
@@ -106,10 +115,10 @@
     <div>
       <h3 class="text-xl font-semibold mb-2">Outils</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <span class="bg-zinc-800 py-2 px-4 rounded">Tableau</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Excel</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Power BI</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Access</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">Tableau</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">Excel</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">Power BI</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">Access</span>
       </div>
     </div>
 
@@ -117,13 +126,13 @@
     <div>
       <h3 class="text-xl font-semibold mb-2">Programmation</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <span class="bg-zinc-800 py-2 px-4 rounded">SQL</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Python</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">SAS</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">R</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">VBA</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">DAX</span>
-        <span class="bg-zinc-800 py-2 px-4 rounded">Power Query</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">SQL</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">Python</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">SAS</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">R</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">VBA</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">DAX</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">Power Query</span>
       </div>
     </div>
 
@@ -131,48 +140,52 @@
     <div>
       <h3 class="text-xl font-semibold mb-2">Cloud</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <span class="bg-zinc-800 py-2 px-4 rounded">Microsoft Azure</span>
+        <span class="bg-blue-100 py-2 px-4 rounded">Microsoft Azure</span>
       </div>
     </div>
   </div>
 </section>
-<!-- Modal CV -->
-<div id="modalCV" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-  <div class="bg-zinc-900 p-6 rounded max-w-4xl w-full relative">
-    <button onclick="closeModal('modalCV')" class="absolute top-2 right-2 text-white text-xl">✖</button>
-    <h3 class="text-2xl font-bold mb-4 text-white">Mon CV</h3>
-    <iframe src="CV_BEN-LTAIEF_Youssef.pdf" class="w-full h-[80vh] rounded" frameborder="0"></iframe>
-  </div>
-</div>
-<section id="contact" class="text-center">
-      <!-- Boutons CV centrés -->
-  <h2 class="text-3xl font-bold mb-6">CV</h2>
-    <div class="flex flex-col sm:flex-row gap-4 max-w-3xl w-full relative"">
-      <button onclick="openModal('modalCV')" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Visualiser mon CV</button>
-      <a href="CV_BEN-LTAIEF_Youssef.pdf" download class="bg-green-600 px-4 py-2 rounded hover:bg-green-700">Télécharger mon CV</a>
-    </div>
-  <h2 class="text-3xl font-bold mb-6">Contact</h2>
 
-  <div class="flex flex-col items-center space-y-6">
-    <form action="https://formspree.io/f/mzzrwegn" method="POST" class="space-y-4 w-full max-w-xl">
-      <input type="text" name="name" placeholder="Votre nom" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
-      <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white" />
-      <textarea name="message" placeholder="Votre message" required rows="5" class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-white"></textarea>
-      <button type="submit" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Envoyer</button>
-    </form>
 
-    <!-- Boutons CV centrés -->
+    <section id="cv" class="bg-white shadow-md rounded p-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">CV</h2>
+      <div class="flex justify-center gap-6">
+        <button
+          onclick="openModal('modalCV')"
+          class="bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 px-6 py-3 rounded font-semibold text-white transition"
+          title="Visualiser le CV"
+        >
+          Visualiser
+        </button>
+        <a
+          href="/mnt/data/CV-Youssef-Ben-Ltaief.pdf"
+          download
+          class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 px-6 py-3 rounded font-semibold text-white transition"
+          title="Télécharger le CV"
+        >
+          Télécharger
+        </a>
+      </div>
 
-  </div>
-</section>
+      <div id="modalCV" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded max-w-5xl w-full max-h-[90vh] overflow-auto relative">
+          <button onclick="closeModal('modalCV')" class="absolute top-2 right-2 text-blue-900 text-2xl font-bold p-2">✖</button>
+          <iframe src="/mnt/data/CV-Youssef-Ben-Ltaief.pdf" class="w-full h-[90vh]" frameborder="0"></iframe>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    function openModal(id) {
-      document.getElementById(id).classList.remove("hidden");
-    }
-    function closeModal(id) {
-      document.getElementById(id).classList.add("hidden");
-    }
-  </script>
+    <section id="contact" class="bg-white shadow-md rounded p-6 max-w-lg mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Contactez-moi</h2>
+      <form class="space-y-4">
+        <input type="text" name="name" placeholder="Votre nom" required class="w-full p-2 rounded border border-blue-400 text-blue-900" />
+        <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 rounded border border-blue-400 text-blue-900" />
+        <textarea name="message" placeholder="Votre message" required rows="5" class="w-full p-2 rounded border border-blue-400 text-blue-900"></textarea>
+        <button type="submit" class="bg-gradient-to-r from-blue-700 to-blue-800 px-6 py-3 rounded hover:from-blue-800 hover:to-blue-900 font-semibold text-white block mx-auto transition">
+          Envoyer
+        </button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
