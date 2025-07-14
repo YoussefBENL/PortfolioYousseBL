@@ -8,198 +8,514 @@
   <script>
     function openModal(id) {
       document.getElementById(id).classList.remove("hidden");
+      document.body.style.overflow = "hidden";
     }
     function closeModal(id) {
       document.getElementById(id).classList.add("hidden");
+      document.body.style.overflow = "auto";
     }
   </script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D83Z4034NV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D83Z4034NV');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D83Z4034NV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D83Z4034NV');
+  </script>
+  <style>
+    #starRatingHeader .star {
+      cursor: pointer;
+      transition: color 0.3s ease;
+      font-size: 1.6rem;
+      color: #ddd;
+      user-select: none;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body class="bg-blue-200 text-blue-900 font-sans">
-  <header class="bg-white p-6 shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <div class="flex items-center gap-4">
-        <img src="20250212_222434.png" alt="photo Youssef" class="h-12 w-12 rounded-full border border-blue-900 object-cover" />
-        <h1 class="text-2xl font-bold">Youssef Ben Ltaief</h1>
-      </div>
-      <nav class="flex space-x-6 text-sm">
-        <a href="#about" class="hover:text-blue-800 transition">À propos</a>
-        <a href="#projets" class="hover:text-blue-800 transition">Projets</a>
-        <a href="#competences" class="hover:text-blue-800 transition">Compétences</a>
-        <a href="#contact" class="hover:text-blue-800 transition">Contact</a>
-      </nav>
+  <header class="bg-white p-6 shadow-md sticky top-0 z-50 flex items-center justify-between max-w-6xl mx-auto">
+    <div class="flex items-center gap-4">
+      <img src="20250212_222434.png" alt="photo Youssef" class="h-12 w-12 rounded-full border border-blue-900 object-cover" />
+      <h1 class="text-2xl font-bold select-none">Youssef Ben Ltaief</h1>
     </div>
+    <div id="starRatingHeader" class="flex space-x-1" aria-label="Notation du portfolio">
+      <span data-value="1" class="star">★</span>
+      <span data-value="2" class="star">★</span>
+      <span data-value="3" class="star">★</span>
+      <span data-value="4" class="star">★</span>
+      <span data-value="5" class="star">★</span>
+    </div>
+    <nav class="flex space-x-6 text-sm">
+      <a href="#about" class="hover:text-blue-800 transition">À propos</a>
+      <a href="#projets" class="hover:text-blue-800 transition">Projets</a>
+      <a href="#competences" class="hover:text-blue-800 transition">Compétences</a>
+      <a href="#contact" class="hover:text-blue-800 transition">Contact</a>
+    </nav>
   </header>
 
   <main class="max-w-6xl mx-auto px-6 py-10 space-y-20">
-
     <section id="about" class="bg-white shadow-md rounded p-6">
       <h2 class="text-3xl font-bold mb-4">BIENVENUE !</h2>
       <p class="text-lg max-w-3xl">
-Bonjour, Je m’appelle Youssef et je vous souhaite la bienvenue sur mon portfolio ! <br>
-        Je suis actuellement étudiant en BUT Sciences des Données à l’Université Paris Cité, je suis à la recherche d’une alternance de 2 ans dans le domaine de la data. J'aime explorer, analyser et transformer les données en solutions concrètes grâce à des outils comme Python, SQL, Power BI, Excel, etc.
-            </p>
+        Bonjour, Je m'appelle Youssef et je vous souhaite la bienvenue sur mon portfolio ! <br>
+        Je suis actuellement étudiant en BUT Sciences des Données à l'Université Paris Cité, je suis à la recherche d'une alternance de 2 ans dans le domaine de la data. J'aime explorer, analyser et transformer les données en solutions concrètes grâce à des outils comme Python, SQL, Power BI, Excel, etc.
+      </p>
     </section>
 
     <section id="projets" class="bg-white shadow-md rounded p-6">
       <h2 class="text-3xl font-bold mb-4">Mes projets</h2>
-      <p class="mb-6 text-blue-800">Découvrez quelques-uns des projets que j’ai réalisés, illustrant mes compétences en analyse de données et programmation.</p>
+      <p class="mb-6 text-blue-800">Découvrez quelques-uns des projets que j'ai réalisés, illustrant mes compétences en analyse de données et programmation.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div onclick="openModal('modal1')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
-          <img src="enquetepoleculture.png" alt="Projet 1" class="rounded mb-2" />
-          <h3 class="font-semibold text-lg">Enquête sur le pôle culture</h3>
-          <p class="text-sm text-blue-900">Création de questionnaire, nettoyage et analyse Excel.</p>
+        <!-- Projet 1 -->
+        <div onclick="openModal('modal-estimation')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <h3 class="font-semibold text-lg">Estimation par échantillonnage</h3>
+          <p class="text-sm">Analyse statistique d'échantillons d'étoiles avec R</p>
         </div>
-        <div onclick="openModal('modal2')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
-          <img src="excel.png" alt="Projet 2" class="rounded mb-2" />
-          <h3 class="font-semibold text-lg">Analyse pour une boutique de location</h3>
-          <p class="text-sm text-blue-900">SQL, TCD Excel, tendances business.</p>
+        
+        <!-- Projet 2 -->
+        <div onclick="openModal('modal-fichiers')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <h3 class="font-semibold text-lg">Traitement de fichiers</h3>
+          <p class="text-sm">Automatisation de traitement de fichiers avec Python</p>
         </div>
-        <div onclick="openModal('modal3')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
-          <img src="Python-programming.jpg" alt="Projet 3" class="rounded mb-2" />
-          <h3 class="font-semibold text-lg">Traitement de fichiers texte</h3>
-          <p class="text-sm text-blue-900">Python pour restructurer des fichiers textes.</p>
+        
+        <!-- Projet 3 -->
+        <div onclick="openModal('modal-regression')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <h3 class="font-semibold text-lg">Régression polynomiale</h3>
+          <p class="text-sm">Modélisation de courbes de croissance</p>
         </div>
-      </div>
-
-      <!-- Modals -->
-      <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-white p-6 rounded max-w-lg relative max-h-[90vh] overflow-auto text-blue-900">
-          <button onclick="closeModal('modal1')" class="absolute top-2 right-2 text-blue-900 text-xl font-bold">✖</button>
-          <h3 class="text-2xl font-bold mb-2">Enquête sur le pôle culture</h3>
-          <div class="space-y-3">
-            <p class="text-lg">Enquête : Conception d’un questionnaire et diffusion via la messagerie universitaire, complétée par une collecte physique sur les campus.</p>
-            <p class="text-lg">Traitement des données :</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Nettoyage des données (suppression de doublons, vérification de la cohérence).</li>
-              <li>Analyses statistiques (univariées pour identifier les tendances générales, bivariées pour croiser les variables).</li>
-              <li>Extraction de KPIs clés :
-                <ul class="list-disc pl-6">
-                  <li>Taux de participation</li>
-                  <li>Niveau de satisfaction globale</li>
-                  <li>Coût moyen par étudiant pour les activités culturelles</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+        
+        <!-- Projet 4 -->
+        <div onclick="openModal('modal-enquete-culture')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <h3 class="font-semibold text-lg">Enquête culturelle</h3>
+          <p class="text-sm">Enquête de satisfaction universitaire</p>
         </div>
-      </div>
-
-      <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-white p-6 rounded max-w-lg relative max-h-[90vh] overflow-auto text-blue-900">
-          <button onclick="closeModal('modal2')" class="absolute top-2 right-2 text-blue-900 text-xl font-bold">✖</button>
-          <h3 class="text-2xl font-bold mb-2">Analyse pour une boutique de location</h3>
-          <ul class="list-disc pl-6 space-y-2">
-            <li>Nettoyage et structuration des données dans Excel</li>
-            <li>Suivi de 5 KPI : CA, répartition films, fréquence location, volume transactions, taux de réachat</li>
-            <li>Requêtes SQL</li>
-            <li>Travail en équipe de 5</li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="modal3" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div class="bg-white p-6 rounded max-w-lg relative max-h-[90vh] overflow-auto text-blue-900">
-          <button onclick="closeModal('modal3')" class="absolute top-2 right-2 text-blue-900 text-xl font-bold">✖</button>
-          <h3 class="text-2xl font-bold mb-2">Traitement de fichiers texte</h3>
-          <ul class="list-disc pl-6 space-y-2">
-            <li>Utilisation de Python pour lire, nettoyer et structurer des fichiers texte bruts</li>
-            <li>Organisation finale dans un Excel pour analyse</li>
-          </ul>
+        
+        <!-- Projet 5 -->
+        <div onclick="openModal('modal-boutique')" class="cursor-pointer bg-blue-100 p-4 rounded shadow hover:ring-2 hover:ring-blue-800 transition">
+          <h3 class="font-semibold text-lg">Analyse commerciale</h3>
+          <p class="text-sm">Reporting pour boutique de location</p>
         </div>
       </div>
     </section>
 
-    <section id="competences" class="bg-white text-blue-900 shadow-md rounded p-6">
-      <h2 class="text-3xl font-bold mb-4">Compétences</h2>
-      <p class="mb-6 text-blue-800">Voici un aperçu des outils et langages que je maîtrise, ainsi que mes connaissances en cloud.</p>
-      <div class="space-y-8">
-        <!-- Outils -->
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Outils</h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <span class="bg-blue-100 py-2 px-4 rounded">Tableau</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">Excel</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">Power BI</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">Access</span>
-          </div>
-        </div>
-
-        <!-- Programmation -->
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Programmation</h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <span class="bg-blue-100 py-2 px-4 rounded">SQL</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">Python</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">SAS</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">R</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">VBA</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">DAX</span>
-            <span class="bg-blue-100 py-2 px-4 rounded">Power Query</span>
-          </div>
-        </div>
-
-        <!-- Cloud -->
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Cloud</h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <span class="bg-blue-100 py-2 px-4 rounded">Microsoft Azure</span>
-          </div>
+ <section id="competences" class="bg-white shadow-md rounded p-6">
+    <h2 class="text-3xl font-bold mb-4">Compétences</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Langages</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+          <span class="bg-blue-100 py-2 px-4 rounded">Python</span>
+          <span class="bg-blue-100 py-2 px-4 rounded">SQL</span>
+          <span class="bg-blue-100 py-2 px-4 rounded">R</span>
+          <span class="bg-blue-100 py-2 px-4 rounded">SAS</span>
         </div>
       </div>
-    </section>
-
-    <section id="contact" class="bg-white shadow-md rounded p-6 max-w-lg mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">Contact</h2>
-      <p class="mb-6 text-center text-blue-800">N’hésitez pas à me contacter pour toute question ou opportunité.</p>
-      <form class="space-y-4">
-        <input type="text" name="name" placeholder="Votre nom" required class="w-full p-2 rounded border border-blue-400 text-blue-900" />
-        <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 rounded border border-blue-400 text-blue-900" />
-        <textarea name="message" placeholder="Votre message" required rows="5" class="w-full p-2 rounded border border-blue-400 text-blue-900"></textarea>
-        <button type="submit" class="bg-gradient-to-r from-blue-700 to-blue-800 px-6 py-3 rounded hover:from-blue-800 hover:to-blue-900 font-semibold text-white block mx-auto transition">
-          Envoyer
-        </button>
-      </form>
-    </section>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Outils</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+          <span class="bg-blue-100 py-2 px-4 rounded">Power BI</span>
+          <span class="bg-blue-100 py-2 px-4 rounded">Excel</span>
+          <span class="bg-blue-100 py-2 px-4 rounded">Azure</span>
+          <span class="bg-blue-100 py-2 px-4 rounded">Tableau</span>
+        </div>
+      </div>
+    </div>
+  </section>
   </main>
+
+  <!-- Bouton Contact flottant -->
+  <div class="fixed bottom-6 left-6 z-50">
+    <button onclick="openModal('modalContact')" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded text-white shadow-lg transition">
+      Contactez-moi
+    </button>
+  </div>
 
   <!-- Boutons CV flottants -->
   <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
-    <button
-      onclick="openModal('modalCV')"
-      class="bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 px-6 py-3 rounded font-semibold text-white transition shadow-lg"
-      title="Visualiser le CV"
-    >
+    <button onclick="openModal('modalCV')" class="bg-blue-700 hover:bg-blue-800 px-6 py-3 rounded text-white shadow-lg transition">
       Visualiser CV
     </button>
-    <a
-      href="CV_BEN-LTAIEF_Youssef.pdf"
-      download
-      class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 px-6 py-3 rounded font-semibold text-white transition shadow-lg text-center"
-      title="Télécharger le CV"
-    >
+    <a href="CV_BEN-LTAIEF_Youssef.pdf" download class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded text-white shadow-lg transition text-center">
       Télécharger CV
     </a>
   </div>
 
-<!-- Modal CV -->
-<div id="modalCV" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
-  <div class="bg-white rounded max-w-5xl w-full max-h-[90vh] overflow-auto relative p-6">
-    <button onclick="closeModal('modalCV')" class="absolute top-2 right-2 text-blue-900 text-2xl font-bold p-2">✖</button>
-    <iframe src="CV_BEN-LTAIEF_Youssef.pdf" class="w-full h-[90vh]" frameborder="0"></iframe>
-    <p class="mt-4 text-center text-blue-900">
-      Si le CV ne s’affiche pas, <a href="CV154785" target="_blank" rel="noopener" class="underline hover:text-blue-700">cliquez ici pour l’ouvrir dans un nouvel onglet</a>.
+  <!-- Modale CV -->
+  <div id="modalCV" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded max-w-4xl w-full max-h-[90vh] overflow-auto relative p-6">
+      <button onclick="closeModal('modalCV')" class="absolute top-2 right-2 text-2xl font-bold">✖</button>
+      <h2 class="text-2xl font-bold mb-4">Mon CV</h2>
+      <div class="flex justify-center">
+        <img src="CV_BEN-LTAIEF_Youssef.png" alt="CV Youssef Ben Ltaief" class="max-w-full h-auto">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modale Contact -->
+  <div id="modalContact" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded max-w-4xl w-full max-h-[90vh] overflow-auto relative p-10 text-blue-900">
+      <button onclick="closeModal('modalContact')" class="absolute top-4 right-4 text-blue-900 text-3xl font-bold p-2">✖</button>
+      <h2 class="text-3xl font-bold mb-8 text-center">Contactez-moi</h2>
+      <form 
+        id="contactForm" 
+        action="https://formsubmit.co/bentaief.youssef@gmail.com" 
+        method="POST"
+        class="space-y-6"
+      >
+        <input type="hidden" name="_subject" value="Nouveau message depuis portfolio">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" id="userRating" name="rating" value="">
+        
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="Votre nom" 
+          required 
+          class="w-full p-3 rounded border border-blue-400 text-blue-900 text-lg" 
+        />
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Votre email" 
+          required 
+          class="w-full p-3 rounded border border-blue-400 text-blue-900 text-lg" 
+        />
+        <textarea 
+          name="message" 
+          placeholder="Votre message" 
+          required 
+          rows="7" 
+          class="w-full p-3 rounded border border-blue-400 text-blue-900 text-lg"
+        ></textarea>
+        <button 
+          type="submit" 
+          class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded font-semibold text-white block mx-auto transition text-xl"
+        >
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </div>
+
+<!-- Modales des projets avec contenu -->
+<div id="modal-estimation" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded max-w-4xl w-full max-h-[90vh] overflow-auto relative p-6 text-blue-900">
+    <button onclick="closeModal('modal-estimation')" class="absolute top-2 right-2 text-blue-900 text-2xl font-bold p-2">✖</button>
+    <h2 class="text-2xl font-bold mb-4">Projet : Estimation & Test d’hypothèse – Données astronomiques</h2>
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Objectif :</strong><br>
+      Étudier deux échantillons d’étoiles extraits d’une base complète (39 552 étoiles), afin d’estimer des paramètres comme la moyenne ou une proportion, et de tester des hypothèses à l’aide de tests statistiques.
+    </p>
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Méthodologie :</strong><br>
+      • Construction d’intervalles de confiance à 95 % et 99 % pour des paramètres inconnus (moyenne, proportion)<br>
+      • Réalisation de tests statistiques (test de Student)<br>
+      • Comparaison entre résultats théoriques (espérance, variance) et résultats empiriques obtenus par simulation<br>
+      • Visualisation des zones de rejet / non-rejet des hypothèses à l’aide de courbes de densité
+    </p>
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Compétences mobilisées :</strong><br>
+      • Statistiques inférentielles : intervalles de confiance, tests d’hypothèse<br>
+      • Interprétation de graphiques statistiques<br>
+      • Programmation de fonctions statistiques avec R<br>
+      • Analyse critique des résultats (écarts entre théorie et pratique)
+    </p>
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Outils et langages utilisés :</strong><br>
+      R / RStudio, packages, fonctions personnalisées <br>
+      Travail sur plusieurs échantillons + jeu de données complet (fichier <code>Star39552balanced.csv</code>)
+    </p>
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Livrables :</strong><br>
+      • Rapport PDF avec codes commentés<br>
+      • Graphiques annotés (boxplots, histogrammes, courbes de densité)<br>
+      • Interprétations claires + conclusion générale<br>
+      • Visualisation des statistiques de test
+    </p>
+    <p class="mt-4 text-center text-blue-700 font-semibold italic">
+      Ce projet m’a permis de mieux comprendre l’application concrète des tests statistiques sur de grandes données.
     </p>
   </div>
 </div>
 
+<div id="modal-fichiers" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded max-w-4xl w-full max-h-[90vh] overflow-auto relative p-6 text-blue-900">
+    <button onclick="closeModal('modal-fichiers')" class="absolute top-2 right-2 text-blue-900 text-2xl font-bold p-2">✖</button>
+    <h2 class="text-2xl font-bold mb-4">Projet : Manipulation de fichiers texte & CSV en Python</h2>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Objectif :</strong><br>
+      Apprendre à automatiser la lecture, l’écriture et la transformation de fichiers (texte brut et CSV) à travers une série d’exercices concrets.
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Contenu du projet :</strong><br>
+      • Création et écriture de fichiers texte simples<br>
+      • Lecture et affichage conditionnel de contenus<br>
+      • Découpage de texte avec <code>split()</code>, <code>partition()</code>, <code>capitalize()</code>, <code>title()</code><br>
+      • Transformation de données en tableau et conversion vers CSV<br>
+      • Manipulation de structures en lignes/colonnes avec séparateurs personnalisés (`,` / `;`)<br>
+      • Calcul de moyenne, formatage d'affichage (indentation, paragraphe, ponctuation)
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Compétences mobilisées :</strong><br>
+      • Lecture et écriture de fichiers texte et CSV<br>
+      • Manipulation de chaînes de caractères<br>
+      • Boucles, conditions, fonctions Python<br>
+      • Traitement automatique de fichiers structurés et semi-structurés
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Outils et langages utilisés :</strong><br>
+      Python, fichiers .txt et .csv
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Livrables :</strong><br>
+      Scripts Python <br>
+      Fichiers générés
+    </p>
+
+    <p class="mt-4 text-center text-blue-700 font-semibold italic">
+      Ce projet m’a rendu plus à l’aise avec la manipulation automatisée de fichiers en Python.
+    </p>
+  </div>
+</div>
+
+<div id="modal-regression" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded max-w-4xl w-full max-h-[90vh] overflow-auto relative p-6 text-blue-900">
+    <button onclick="closeModal('modal-regression')" class="absolute top-2 right-2 text-blue-900 text-2xl font-bold p-2">✖</button>
+    <h2 class="text-2xl font-bold mb-4">Projet : Régression sur données réelles – Étude de courbes de croissance</h2>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Objectif :</strong><br>
+      Modéliser et analyser les courbes de croissance (âge / taille) de garçons et filles de 5 à 19 ans dans deux pays différents, à partir d’un vaste jeu de données collecté à l’échelle internationale.
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Contenu du projet :</strong><br>
+      • Analyse descriptive des distributions d’âge et de taille<br>
+      • Régression polynomiale sur les données brutes pour modéliser les courbes de croissance (2 sexes × 2 pays = 4 courbes)<br>
+      • Calcul et visualisation des courbes des médianes et quartiles selon les tranches d’âge<br>
+      • Comparaison entre filles et garçons, et entre les deux pays <br>
+      • Rédaction d’un rapport structuré en français (synthèse en anglais incluse)
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Compétences mobilisées :</strong><br>
+      • Régression polynomiale<br>
+      • Analyse descriptive univariée et bivariée<br>
+      • Segmentation de données (groupes d’âge)<br>
+      • Visualisation de données et interprétation statistique<br>
+      • Rédaction scientifique
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Outils et langages utilisés :</strong><br>
+      Rstudio
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Livrables :</strong><br>
+      Rapport PDF (~15 pages) avec graphiques commentés<br>
+      Modèles de régression et interprétation des coefficients<br>
+      Synthèse comparative entre pays et sexes
+    </p>
+
+    <p class="mt-4 text-center text-blue-700 font-semibold italic">
+      J’ai apprécié la diversité des données et la richesse de l’analyse statistique dans ce projet.
+    </p>
+  </div>
+</div>
+
+<div id="modal-enquete-culture" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded max-w-4xl w-full max-h-[90vh] overflow-auto relative p-6 text-blue-900">
+    <button onclick="closeModal('modal-enquete-culture')" class="absolute top-2 right-2 text-blue-900 text-2xl font-bold p-2">✖</button>
+    <h2 class="text-2xl font-bold mb-4">Projet : Mise en œuvre d’une enquête – Pôle Culture</h2>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Objectif :</strong><br>
+      Concevoir, diffuser et analyser une enquête de satisfaction auprès des étudiants sur les activités du pôle culture de l’université.
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Contenu du projet :</strong><br>
+      • Élaboration du questionnaire avec LimeSurvey<br>
+      • Diffusion de l’enquête par mail universitaire + collecte directe sur les campus<br>
+      • Nettoyage des réponses et traitement des valeurs manquantes<br>
+      • Analyse statistique descriptive des réponses avec Excel<br>
+      • Synthèse des résultats sous forme de rapport + graphiques
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Compétences mobilisées :</strong><br>
+      • Conception et gestion d’enquête<br>
+      • Nettoyage et structuration des données<br>
+      • Analyse statistique descriptive<br>
+      • Communication écrite et visuelle
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Outils et langages utilisés :</strong><br>
+      LimeSurvey, Excel
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Livrables :</strong><br>
+      Questionnaire en ligne<br>
+      Rapport synthétique avec graphiques<br>
+      Présentation orale finale
+    </p>
+
+    <p class="mt-4 text-center text-blue-700 font-semibold italic">
+      Ce projet m’a permis de mieux comprendre l’importance de la qualité des données dans une enquête.
+    </p>
+  </div>
+</div>
+
+<div id="modal-boutique" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded max-w-4xl w-full max-h-[90vh] overflow-auto relative p-6 text-blue-900">
+    <button onclick="closeModal('modal-boutique')" class="absolute top-2 right-2 text-blue-900 text-2xl font-bold p-2">✖</button>
+    <h2 class="text-2xl font-bold mb-4">Projet : Analyse de données – Boutique de location</h2>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Objectif :</strong><br>
+      Exploiter un jeu de données brut provenant d’une boutique de location pour produire un reporting clair à l’aide d’Excel et SQL.
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Contenu du projet :</strong><br>
+      • Nettoyage et transformation d’un fichier Excel brut en base exploitable<br>
+      • Requêtes SQL (SELECT, JOIN…) sur une base relationnelle pour sélectionner les informations pertinentes<br>
+      • Création de tableaux croisés dynamiques<br>
+      • Application de mises en forme conditionnelles pour faire ressortir les tendances<br>
+      • Analyse des résultats pour en dégager des conclusions opérationnelles
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Compétences mobilisées :</strong><br>
+      • Manipulation de fichiers Excel complexes<br>
+      • Requêtes SQL sur SGBD relationnel<br>
+      • Dataviz simple et indicateurs dynamiques<br>
+      • Esprit d’analyse et synthèse de données
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Outils et langages utilisés :</strong><br>
+      Excel (TCD, format conditionnel), SQL
+    </p>
+
+    <p class="mb-4 text-base leading-relaxed">
+      <strong>Livrables :</strong><br>
+      Fichier Excel propre avec reporting dynamique<br>
+      SQL<br>
+      Note d’analyse avec interprétation des résultats
+    </p>
+
+    <p class="mt-4 text-center text-blue-700 font-semibold italic">
+      Ce projet m’a appris à transformer des données brutes en analyses exploitables pour la prise de décision.
+    </p>
+  </div>
+</div>
+
+
+  <!-- Modale de remerciement pour la note -->
+  <div id="modalRatingThanks" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded max-w-md w-full p-8 text-center text-blue-900">
+      <h2 class="text-2xl font-bold mb-4">Merci pour votre note !</h2>
+      <p class="mb-6">Votre évaluation de <span id="displayRating" class="font-bold"></span> étoiles a été enregistrée.</p>
+      <p class="mb-6">Vous pouvez également laisser un commentaire si vous le souhaitez.</p>
+      <button 
+        onclick="closeModal('modalRatingThanks'); openModal('modalContact')" 
+        class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded text-white"
+      >
+        Laisser un commentaire
+      </button>
+      <button 
+        onclick="closeModal('modalRatingThanks')" 
+        class="ml-4 bg-gray-300 hover:bg-gray-400 px-6 py-2 rounded"
+      >
+        Fermer
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Système d'étoiles avec envoi via FormSubmit
+    const stars = document.querySelectorAll('#starRatingHeader .star');
+    let currentRating = 0;
+    let hasRated = false;
+
+    function setStars(rating) {
+      stars.forEach(star => {
+        star.style.color = star.dataset.value <= rating ? 'gold' : '#ddd';
+      });
+    }
+
+    function sendRating(rating) {
+      document.getElementById('userRating').value = rating;
+      
+      const formData = new FormData();
+      formData.append('rating', rating);
+      formData.append('_subject', `Nouvelle note: ${rating} étoiles sur le portfolio`);
+      formData.append('_template', 'box');
+      formData.append('_captcha', 'false');
+      
+      fetch('https://formsubmit.co/ajax/bentaief.youssef@gmail.com', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Note envoyée avec succès:', data);
+        document.getElementById('displayRating').textContent = rating;
+        openModal('modalRatingThanks');
+      })
+      .catch(error => {
+        console.error('Erreur lors de l\'envoi de la note:', error);
+        document.getElementById('displayRating').textContent = rating;
+        openModal('modalRatingThanks');
+      });
+      
+      hasRated = true;
+      currentRating = rating;
+    }
+
+    stars.forEach(star => {
+      star.addEventListener('mouseenter', () => {
+        if (!hasRated) {
+          setStars(star.dataset.value);
+        }
+      });
+      
+      star.addEventListener('mouseleave', () => {
+        if (!hasRated) {
+          setStars(0);
+        } else {
+          setStars(currentRating);
+        }
+      });
+      
+      star.addEventListener('click', () => {
+        if (!hasRated) {
+          const rating = parseInt(star.dataset.value);
+          sendRating(rating);
+        }
+      });
+    });
+
+    // Pré-remplir le message avec la note
+    document.getElementById('contactForm').querySelector('textarea[name="message"]').addEventListener('focus', function() {
+      if (currentRating > 0 && this.value === '') {
+        this.value = `Je donne une note de ${currentRating}/5 à votre portfolio.\n\n`;
+      }
+    });
+  </script>
 </body>
 </html>
