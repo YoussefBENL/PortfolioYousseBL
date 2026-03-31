@@ -360,6 +360,7 @@
         <div class="progress-bar" id="myBar"></div>
     </div>
     <div id="emailToast" class="toast-notif">Adresse email copiée</div>
+	<div id="successToast" class="toast-notif" style="background-color: #3498db; box-shadow: 0 10px 30px rgba(52,152,219,0.4);">Message envoyé avec succès !</div>
 
     <div class="background-animation">
         <div class="shape shape-1"></div>
@@ -1175,6 +1176,49 @@ Database changed
                 document.getElementById('clean-table').style.display = 'block';
             }, 2000);
         }
+	// --- SCRIPT POUR LE FORMULAIRE DE CONTACT ---
+        const form = document.querySelector('.form-container form');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Empêche le rechargement de la page
+            
+            // 1. Change l'état du bouton pour montrer que ça charge
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+
+            // 2. Envoi des données en arrière-plan
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                mode: 'no-cors' // <--- LA LIGNE MAGIQUE EST LÀ
+            })
+            .then(() => { // <--- On enlève "response =>" ici
+                // 3. Succès : on vide le formulaire
+                form.reset();
+                
+                // On affiche le petit pop-up (Toast) de succès
+                var toast = document.getElementById("successToast");
+                toast.classList.add("show");
+                
+                // On remet le bouton à son état normal après 3 secondes
+                setTimeout(function(){ 
+                    toast.classList.remove("show"); 
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }, 1000);
+            })
+            .catch(error => {
+                // En cas d'erreur de connexion
+                console.error('Erreur!', error.message);
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> Erreur de connexion';
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }, 1000);
+            });
+        });
     </script>
 </body>
 </html>
