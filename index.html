@@ -263,6 +263,47 @@
         .apport-card:nth-child(5) { --card-color: #e74c3c; } .apport-card:nth-child(5) .apport-icon { background: rgba(231,76,60,.1); }
         .apport-card:nth-child(6) { --card-color: #1abc9c; } .apport-card:nth-child(6) .apport-icon { background: rgba(26,188,156,.1); }
 
+        /* --- Contact Form Styles --- */
+        .contact-form-section { background: var(--bg-body); padding-bottom: 100px; }
+        .form-container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: var(--bg-card); 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: var(--shadow); 
+            border: 1px solid var(--border); 
+            transition: all 0.3s ease;
+        }
+        .custom-input { 
+            background-color: var(--bg-body); 
+            border: 1px solid var(--border); 
+            color: var(--text-main); 
+            border-radius: 12px; 
+            padding: 14px 20px; 
+            transition: all 0.3s ease; 
+            font-size: 0.95rem;
+        }
+        .custom-input:focus { 
+            background-color: var(--bg-body); 
+            border-color: var(--primary); 
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15); 
+            color: var(--text-main); 
+            outline: none;
+        }
+        .custom-input::placeholder { color: var(--text-muted); opacity: 0.5; }
+        .form-label { 
+            font-weight: 600; 
+            color: var(--text-main); 
+            font-size: 0.95rem; 
+            margin-bottom: 10px; 
+            margin-left: 5px;
+        }
+        
+        @media(max-width: 768px) {
+            .form-container { padding: 25px 20px; }
+        }
+
         footer { background: #111; color: white; padding: 5rem 0 2rem; min-height: auto; }
         .footer-avail { display: inline-block; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; padding: 7px 20px; border-radius: 30px; border: 1px solid rgba(46,204,113,.5); color: #2ecc71; background: rgba(46,204,113,.08); margin-bottom: 28px; }
         .footer-avail::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #2ecc71; margin-right: 9px; vertical-align: middle; animation: pulse-green 2s infinite; }
@@ -391,7 +432,7 @@
                 <div class="phare-card" data-tilt data-tilt-max="5" data-bs-toggle="modal" data-bs-target="#modalPythonAPI" data-aos="fade-up" data-aos-delay="200">
                     <div class="phare-thumb">
                         <div class="interactive-sticker"><i class="fas fa-mouse-pointer"></i> Démonstration</div>
-                        <img src="images/Webscraping & API.avif" alt="Webscraping API Python">
+                        <img src="images/projet_python.jpg" alt="Webscraping API Python">
                         <div class="phare-overlay"><span class="phare-overlay-btn">Lancer la démonstration</span></div>
                     </div>
                     <div class="phare-body">
@@ -601,7 +642,43 @@
                 <div class="project-item" data-category="autre" data-bs-toggle="modal" data-bs-target="#modalInfographie"><div class="project-thumb"><img src="images/projet_infographie.jpg" alt="Infographie"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Infographie IA & Santé</h4><p>Vulgarisation visuelle.</p><div class="tags"><span>Data Storytelling</span></div></div></div>
             </div>
         </div>
-        <a href="#contact" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+        <a href="#contact-form" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <section id="contact-form" class="contact-form-section">
+        <div class="container">
+            <p class="section-subtitle" data-aos="fade-up">Discutons</p>
+            <h2 class="section-title" data-aos="fade-up">Envoyez-moi un message</h2>
+            <p class="section-desc text-center" data-aos="fade-up" style="color: var(--text-muted); margin-bottom: 40px;">Remplissez le formulaire ci-dessous pour me contacter directement.</p>
+            
+            <div class="form-container" data-aos="fade-up" data-aos-delay="100">
+                <form action="https://script.google.com/macros/s/AKfycbyei4WCL7AXw6MF63cid3PtZq9g0q1IJkmYjf7YT0MNVgyySWVxW-JYM0c6A530JvIj/exec" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="name" class="form-label">Nom complet</label>
+                            <input type="text" class="form-control custom-input" id="name" name="name" required placeholder="Jean Dupont">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="email" class="form-label">Adresse Email</label>
+                            <input type="email" class="form-control custom-input" id="email" name="email" required placeholder="jean.dupont@email.com">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="form-label">Sujet</label>
+                        <input type="text" class="form-control custom-input" id="subject" name="subject" required placeholder="Proposition d'alternance">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control custom-input" id="message" name="message" rows="6" required placeholder="Votre message ici..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary-custom" style="width: 100%; max-width: 300px;">
+                            <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer id="contact">
