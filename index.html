@@ -61,14 +61,20 @@
 
     <nav class="navbar" aria-label="Navigation principale" data-aos="fade-down" data-aos-duration="800">
         <div class="logo">Youssef<span class="dot secret-trigger" data-bs-toggle="modal" data-bs-target="#modalTerminal" title="Cliquez ici...">.</span></div>
-        <ul class="nav-links">
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Basculer le thème clair / sombre"><i class="fas fa-moon"></i></button>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav-links">
+                <i class="fas fa-bars"></i>
+                <span class="menu-label">Menu</span>
+            </button>
+        </div>
+        <ul class="nav-links" id="main-nav-links">
             <li><a href="#presentation" aria-label="Aller à la section présentation">Profil</a></li>
             <li><a href="#phares" aria-label="Aller à la section projets phares">Projets Phares</a></li>
             <li><a href="#outils" aria-label="Aller à la section stack technique">Stack</a></li>
             <li><a href="#competences" aria-label="Aller à la section compétences">Compétences</a></li>
             <li><a href="#parcours" aria-label="Aller à la section parcours">Parcours</a></li>
             <li><span class="nav-badge"><i class="fas fa-circle"></i> Dispo Sept. 2025</span></li>
-            <li><button id="theme-toggle" class="theme-btn" aria-label="Basculer le thème clair / sombre"><i class="fas fa-moon"></i></button></li>
         </ul>
     </nav>
 
@@ -214,6 +220,31 @@
                         <li><i class="fas fa-check"></i> Création d’outils d’analyse avec R et Python</li>
                         <li><i class="fas fa-check"></i> Automatisation de tâches et de traitements</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours" class="parcours-section">
+        <div class="container">
+            <p class="section-subtitle" data-aos="fade-up">Mon évolution</p>
+            <h2 class="section-title" data-aos="fade-up">Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item left" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-content">
+                        <span class="date">Sept. 2024 - Juin 2027</span>
+                        <h3>BUT Sciences des Données (Bac+3) - 2ème année en cours <br>
+                            parcours visualisation, conception d'outils décisionnels
+                        </h3>
+                        <h4>IUT Paris Rives de Seine, Université Paris Cité</h4>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-aos="fade-left" data-aos-delay="150">
+                    <div class="timeline-content">
+                        <span class="date">2024</span>
+                        <h3>BAC Général - Maths, Physique-Chimie, Mention Assez Bien</h3>
+                        <h4>Lycée Fustel des Coulanges</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -762,7 +793,7 @@ N.close()</code></pre>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="scripts.js" defer></script>
 </body>

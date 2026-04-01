@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 const toggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
 const icon = toggleBtn.querySelector('i');
+const navToggleBtn = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('main-nav-links');
 
 if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
@@ -72,6 +74,61 @@ toggleBtn.addEventListener('click', () => {
     }
 });
 
+if (navToggleBtn && navLinks) {
+    navToggleBtn.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        navToggleBtn.setAttribute('aria-expanded', String(isOpen));
+        navToggleBtn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+        const navIcon = navToggleBtn.querySelector('i');
+        if (navIcon) {
+            navIcon.classList.toggle('fa-bars', !isOpen);
+            navIcon.classList.toggle('fa-xmark', isOpen);
+        }
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggleBtn.setAttribute('aria-expanded', 'false');
+            navToggleBtn.setAttribute('aria-label', 'Ouvrir le menu');
+            const navIcon = navToggleBtn.querySelector('i');
+            if (navIcon) {
+                navIcon.classList.add('fa-bars');
+                navIcon.classList.remove('fa-xmark');
+            }
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!navLinks.classList.contains('open')) return;
+        const clickedInsideMenu = navLinks.contains(event.target);
+        const clickedToggle = navToggleBtn.contains(event.target);
+        if (!clickedInsideMenu && !clickedToggle) {
+            navLinks.classList.remove('open');
+            navToggleBtn.setAttribute('aria-expanded', 'false');
+            navToggleBtn.setAttribute('aria-label', 'Ouvrir le menu');
+            const navIcon = navToggleBtn.querySelector('i');
+            if (navIcon) {
+                navIcon.classList.add('fa-bars');
+                navIcon.classList.remove('fa-xmark');
+            }
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('open');
+            navToggleBtn.setAttribute('aria-expanded', 'false');
+            navToggleBtn.setAttribute('aria-label', 'Ouvrir le menu');
+            const navIcon = navToggleBtn.querySelector('i');
+            if (navIcon) {
+                navIcon.classList.add('fa-bars');
+                navIcon.classList.remove('fa-xmark');
+            }
+        }
+    });
+}
+
 window.addEventListener('scroll', () => {
     const backToTop = document.getElementById('backToTop');
     if (window.scrollY > 300) { backToTop.classList.add('active'); } else { backToTop.classList.remove('active'); }
@@ -82,16 +139,18 @@ window.addEventListener('scroll', () => {
     document.getElementById("myBar").style.width = scrolled + "%";
 });
 
-document.addEventListener("mousemove", (e) => {
-    const x = (window.innerWidth - e.pageX * 2) / 100;
-    const y = (window.innerHeight - e.pageY * 2) / 100;
-    document.querySelector('.shape-1').style.marginLeft = `${x * 2}px`;
-    document.querySelector('.shape-1').style.marginTop = `${y * 2}px`;
-    document.querySelector('.shape-2').style.marginLeft = `${x * -2}px`;
-    document.querySelector('.shape-2').style.marginTop = `${y * -2}px`;
-    document.querySelector('.shape-3').style.marginLeft = `${x * 1.5}px`;
-    document.querySelector('.shape-3').style.marginTop = `${y * 1.5}px`;
-});
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.addEventListener("mousemove", (e) => {
+        const x = (window.innerWidth - e.pageX * 2) / 100;
+        const y = (window.innerHeight - e.pageY * 2) / 100;
+        document.querySelector('.shape-1').style.marginLeft = `${x * 2}px`;
+        document.querySelector('.shape-1').style.marginTop = `${y * 2}px`;
+        document.querySelector('.shape-2').style.marginLeft = `${x * -2}px`;
+        document.querySelector('.shape-2').style.marginTop = `${y * -2}px`;
+        document.querySelector('.shape-3').style.marginLeft = `${x * 1.5}px`;
+        document.querySelector('.shape-3').style.marginTop = `${y * 1.5}px`;
+    });
+}
 
 function copyEmail(e) {
     e.preventDefault();
@@ -271,7 +330,7 @@ filterBtns.forEach(btn => {
     }
 })();
 
-const sections = ['presentation', 'phares', 'outils', 'competences', 'apport', 'all-projects', 'contact-form'];
+const sections = ['presentation', 'phares', 'outils', 'competences', 'parcours', 'apport', 'all-projects', 'contact-form'];
 
 function getCurrentSectionIndex() {
     const middle = window.innerHeight / 2;
