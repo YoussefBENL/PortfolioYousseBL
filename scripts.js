@@ -234,7 +234,7 @@ filterBtns.forEach(btn => {
         { html: '+-----------------------------------+', instant: true },
         { html: '| status                            |', instant: true },
         { html: '+-----------------------------------+', instant: true },
-        { html: "| Prêt pour une alternance en 2025-2026 |", instant: true },
+        { html: "| Prêt pour une alternance en 2026-2026 |", instant: true },
         { html: '+-----------------------------------+', instant: true },
         { html: '1 row in set (0.00 sec)', instant: true },
         { html: '', instant: true },
