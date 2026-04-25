@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – Tests statistiques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">Tests statistiques et analyse exploratoire (CardioGoodFitness)</td>
+    </tr>
+  </table>
+
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Analyse du profil des clients d'une marque de fitness (CardioGoodFitness) : étude des variables influençant le choix du modèle de tapis de course (TM195, TM498, TM798) et l'utilisation du produit.</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Explorer et décrire les données (statistiques descriptives, visualisations).<br>
+        Créer des variables synthétiques (niveau d'éducation, catégorie d'usage).<br>
+        Réaliser des tests statistiques (test du chi², ANOVA, corrélations).<br>
+        Produire un rapport structuré et reproductible avec R Markdown.
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Rapport R Markdown (.Rmd), rapport HTML, script R</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Bilan de la SAE</div>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Analyser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="3">Apprentissages critiques sollicités</td>
+      <td>AC22.01 : Sélectionner les méthodes statistiques adaptées à la problématique</td>
+    </tr>
+    <tr><td>AC22.02 : Mettre en œuvre les méthodes statistiques</td></tr>
+    <tr><td>AC22.03 : Analyser et interpréter les résultats produits</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Choisir les bons tests selon la nature des variables (quantitatives / qualitatives).</td>
+    </tr>
+    <tr><td>Vérifier les conditions d'application avant chaque test.</td></tr>
+    <tr><td>Interpréter les résultats en lien avec la problématique métier.</td></tr>
+  </table>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Valoriser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="2">Apprentissages critiques sollicités</td>
+      <td>AC23.04 : Prendre conscience de la rigueur requise dans ses productions et la communication</td>
+    </tr>
+    <tr><td>AC23.03 : Choisir des indicateurs pertinents pour communiquer sur les résultats</td></tr>
+    <tr>
+      <td class="lb" rowspan="2">Composantes essentielles à respecter</td>
+      <td>Rapport clair et structuré produit avec R Markdown (texte + code + graphiques intégrés).</td>
+    </tr>
+    <tr><td>Sélectionner les visualisations pertinentes (corrplot, GGally, ggplot2).</td></tr>
+  </table>
+
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        Tests du chi² (variables qualitatives).<br><br>
+        ANOVA, test de Student (comparaison de moyennes).<br><br>
+        Corrélation de Pearson / Spearman.<br><br>
+        Visualisation : ggplot2, GGally, corrplot.<br><br>
+        Recodage et création de variables (cut, case_when).
+      </td>
+      <td>
+        Importer et préparer des données R (factor, cut, case_when).<br><br>
+        Créer des sous-groupes par produit (TM195, TM498, TM798).<br><br>
+        Réaliser et interpréter des tests statistiques avec R.<br><br>
+        Produire un rapport Rmd intégrant texte, code et graphiques.
+      </td>
+      <td>
+        Rigueur statistique (ne pas conclure sans vérifier les conditions).<br><br>
+        Autonomie dans l'analyse et la rédaction.<br><br>
+        Esprit critique sur les résultats obtenus.<br><br>
+        Communication claire des conclusions.
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">L'analyse est bien structurée : on part des statistiques descriptives, on crée des variables synthétiques (Niv, Usage_cat), puis on réalise les tests. Les visualisations (GGally, corrplot) sont pertinentes et aident à comprendre les relations entre variables. Le rapport R Markdown est reproductible et lisible.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">La vérification des conditions d'application (normalité, homogénéité des variances) n'a pas toujours été systématique. Pour une prochaine fois : ajouter des tests préliminaires (Shapiro-Wilk, Levene) avant chaque test paramétrique ; mieux justifier le choix de chaque test dans le rapport.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_stat_tests_1.png" alt="Rapport Cardio page 1" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_stat_tests_2.png" alt="Test Student boxplot revenu genre" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>

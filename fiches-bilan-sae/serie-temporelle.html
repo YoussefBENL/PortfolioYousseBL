@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – Séries temporelles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <!-- TABLE 1 -->
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">Description et prévision de données temporelles</td>
+    </tr>
+    <tr>
+    <tr>
+      <td class="lb">Coéquipiers :</td>
+      <td colspan="2"><strong>Regis Sognigbe</strong></td>
+      <td colspan="2"></td>
+    </tr>
+  </table>
+
+  <!-- TABLE 2 -->
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Analyse de la pollution à la gare de Châtelet, à partir d'une série temporelle du taux de CO₂.</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Décrire l'évolution du taux de CO₂ à la gare de Châtelet.<br>
+        Identifier la tendance et, si présente, la saisonnalité.<br>
+        Choisir un modèle adapté aux séries temporelles (décomposition, lissage…).<br>
+        Réaliser une prévision du taux de CO₂ pour 2025–2026.<br>
+        Interpréter les résultats et discuter les limites du modèle.
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Code R (R Markdown .Rmd), Rapport HTML</td>
+    </tr>
+  </table>
+
+  <!-- BILAN -->
+  <div class="section-title">Bilan de la SAE</div>
+
+  <!-- Compétence 1 : Analyser -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Analyser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="3">Apprentissages critiques sollicités</td>
+      <td>AC22.01 : Prendre conscience de la différence entre modélisation statistique et analyse exploratoire</td>
+    </tr>
+    <tr><td>AC22.02 : Saisir la spécificité de l'analyse des données temporelles</td></tr>
+    <tr><td>AC22.05 : Apprécier les limites de validité et les conditions d'application d'une analyse</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Distinguer une approche exploratoire (description de la série) d'une approche prédictive (lissage, ARIMA).</td>
+    </tr>
+    <tr><td>Appliquer les méthodes propres aux séries temporelles (décomposition, désaisonnalisation, moyennes mobiles).</td></tr>
+    <tr><td>Évaluer les limites du modèle (résidus, intervalles de confiance, conditions d'application).</td></tr>
+  </table>
+
+  <!-- Compétence 2 : Valoriser -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Valoriser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="4">Apprentissages critiques sollicités</td>
+      <td>AC23.01 : Saisir l'intérêt de mobiliser de manière proactive des ressources métiers liées à l'environnement</td>
+    </tr>
+    <tr><td>AC23.02 : Savoir défendre ses choix d'analyses</td></tr>
+    <tr><td>AC23.03 : Saisir la nécessité de choisir des indicateurs pertinents pour communiquer sur les résultats</td></tr>
+    <tr><td>AC23.04 : Prendre conscience de la rigueur requise dans ses productions et dans la communication</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Rendu clair et structuré : plan logique + titres + résultats faciles à lire.</td>
+    </tr>
+    <tr><td>Choix d'indicateurs utiles : pas trop, mais ceux qui aident vraiment à comprendre (tendance, prévision, écarts).</td></tr>
+    <tr><td>Communication des limites : préciser ce que le modèle fait bien et ce qu'il fait moins bien (incertitude, valeurs mal ajustées).</td></tr>
+  </table>
+
+  <!-- MA DÉMARCHE -->
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        Statistiques de test.<br><br>
+        Séries temporelles (tendance, saisonnalité, résidus).<br><br>
+        Lissage exponentiel, moyennes mobiles, décomposition STL.<br><br>
+        Prédictions et intervalles de confiance.
+      </td>
+      <td>
+        Savoir utiliser les outils fournis par le prof (R Markdown, packages ts, forecast).<br><br>
+        Calculer les moyennes mobiles (MM7, MM30, MM365).<br><br>
+        Produire un rapport reproductible via R Markdown.
+      </td>
+      <td>
+        Se mettre d'accord avec mon binôme (répartition des parties).<br><br>
+        Gestion du temps (respect des délais).<br><br>
+        Esprit de rigueur : vérifier les résultats avant de les commenter.
+      </td>
+    </tr>
+  </table>
+
+  <!-- EVALUATION -->
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">J'ai trouvé que le code R réalisé via R Markdown (Rmd) était un vrai point fort. D'abord, ça permet de produire un rapport propre et lisible automatiquement : le texte, les tableaux et les graphiques se génèrent avec les résultats, donc on évite les copier-coller et les erreurs. Ensuite, c'est reproductible : si on met à jour les données, on relance le script et le rapport se met à jour sans refaire toute la mise en forme. Enfin, c'est plus professionnel : on a un livrable clair, structuré, et cohérent avec l'objectif de prédiction.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">Le point à améliorer, c'est le rapport : je n'étais pas toujours sûr de ce qu'il fallait expliquer et comment commenter les résultats. Parce que je n'ai pas assez demandé d'avis pendant le travail.<br>
+      Pour une prochaine fois : demander plus souvent au prof (même juste pour valider le plan ou une partie) ; faire un petit point à mi-parcours ; ajouter des explications simples : ce qu'on a fait, pourquoi, et ce que ça veut dire pour la prédiction du CO₂.</p>
+    </div>
+  </div>
+
+  <!-- PREUVES -->
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_serie_temporelle_1.png" alt="Graphique CO2 moyennes mobiles" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_serie_temporelle_2.png" alt="Décomposition et désaisonnalisation CO2" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>

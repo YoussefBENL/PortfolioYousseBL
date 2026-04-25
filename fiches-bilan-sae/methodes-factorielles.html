@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – Méthodes Factorielles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">Méthodes d'analyse multivariée (ACP, AFC, ACM, MDS)</td>
+    </tr>
+  </table>
+
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Application des quatre principales méthodes d'analyse factorielle (ACP, AFC, ACM, MDS) à différents jeux de données en R, avec interprétation des résultats graphiques.</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Maîtriser l'ACP (TP1) sur des données morphologiques (body_full) et de records athlétiques.<br>
+        Réaliser une AFC (TP2) sur les données des Prix Nobel par pays et discipline.<br>
+        Mettre en œuvre une ACM (TP3) sur des variables qualitatives (chiens, thé).<br>
+        Appliquer le MDS (TP4) sur une matrice de distances inter-villes et données de naissance.
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Scripts R (TP1.R, TP2.R, TP3.R, TP4.R), graphiques factoriels commentés</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Bilan de la SAE</div>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Analyser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="3">Apprentissages critiques sollicités</td>
+      <td>AC22.01 : Prendre conscience de la différence entre modélisation statistique et analyse exploratoire</td>
+    </tr>
+    <tr><td>AC22.03 : Comprendre l'intérêt des analyses multivariées pour synthétiser et résumer l'information portée par plusieurs variables</td></tr>
+    <tr><td>AC22.05 : Apprécier les limites de validité et les conditions d'application d'une analyse</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Choisir entre ACP, AFC, ACM ou MDS selon la nature des données (quantitatives, qualitatives, tableau de contingence, distances).</td>
+    </tr>
+    <tr><td>Comprendre et mobiliser les méthodes multivariées pour synthétiser l'information portée par plusieurs variables.</td></tr>
+    <tr><td>Évaluer les limites de la méthode : variance expliquée, nombre d'axes à retenir, conditions de normalisation.</td></tr>
+  </table>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Traiter</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="3">Apprentissages critiques sollicités</td>
+      <td>AC21.01 : Comprendre l'organisation des données de l'entreprise</td>
+    </tr>
+    <tr><td>AC21.04 : Comprendre la nécessité de tester, corriger et documenter un programme</td></tr>
+    <tr><td>AC21.05 : Apprécier l'intérêt de briques logicielles existantes et savoir les utiliser</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Identifier la structure des données (individus, variables actives, variables supplémentaires).</td>
+    </tr>
+    <tr><td>Tester les programmes R, corriger les erreurs et documenter les scripts.</td></tr>
+    <tr><td>Utiliser les packages FactoMineR et factoextra plutôt que de recoder les méthodes.</td></tr>
+  </table>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Valoriser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="4">Apprentissages critiques sollicités</td>
+      <td>AC23.01 : Saisir l'intérêt de mobiliser de manière proactive les ressources métiers liées à l'environnement (y compris économique, international...)</td>
+    </tr>
+    <tr><td>AC23.02 : Savoir défendre ses choix d'analyses</td></tr>
+    <tr><td>AC23.03 : Saisir la nécessité de choisir des indicateurs pertinents pour communiquer sur les résultats</td></tr>
+    <tr><td>AC23.04 : Prendre conscience de la rigueur requise dans ses productions et dans la communication à leur propos</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Mobiliser les connaissances théoriques (cours de méthodes factorielles) pour justifier le choix de la méthode.</td>
+    </tr>
+    <tr><td>Défendre les choix d'analyse : pourquoi ACP sur ces données, quels axes retenir, comment interpréter.</td></tr>
+    <tr><td>Produire des sorties claires et lisibles (graphiques annotés, commentaires des résultats).</td></tr>
+  </table>
+
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        ACP : valeurs propres, variance expliquée, biplot.<br><br>
+        AFC : profils lignes/colonnes, inertie, tableau de contingence.<br><br>
+        ACM : variables qualitatives, modalités, nuage de points.<br><br>
+        MDS : matrice de distances, configuration optimale en 2D.
+      </td>
+      <td>
+        Utiliser FactoMineR (PCA, CA, MCA) et factoextra (fviz_pca, fviz_ca…).<br><br>
+        Normaliser les données avec scale() avant une ACP.<br><br>
+        Représenter individus et variables sur les mêmes axes (biplot).<br><br>
+        Interpréter les contributions et les cos² des variables.
+      </td>
+      <td>
+        Rigueur dans l'interprétation (ne pas lire un graphe sans avoir regardé les axes).<br><br>
+        Curiosité et esprit d'analyse face aux structures multivariées.<br><br>
+        Méthode : s'assurer des conditions avant d'appliquer la méthode.
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">La comparaison des ACP normalisées et non normalisées (body_full.csv) illustre bien l'importance de la normalisation : les résultats sont visuellement très différents et la justification est claire. L'utilisation de fviz_pca_biplot() avec ellipses de confiance par groupe (gender) produit des visualisations lisibles et professionnelles.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">L'interprétation des axes factoriels au-delà du 2e composant (ACP) et la lecture des AFC n'est pas toujours intuitive. Pour une prochaine fois : systématiquement regarder les contributions et cos² avant d'interpréter ; relire les notions théoriques (profils lignes/colonnes pour l'AFC) avant les TP.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_methodes_fact_1.png" alt="TP1.R code ACP" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_methodes_fact_2.png" alt="TP2.R code AFC NobelPrize" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>

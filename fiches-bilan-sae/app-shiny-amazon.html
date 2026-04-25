@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – App R Shiny Amazon Sales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">Tableau de bord interactif R Shiny – Amazon Sales</td>
+    </tr>
+    <tr>
+    <tr>
+      <td class="lb">Coéquipiers :</td>
+      <td colspan="2"><strong>Regis Oswald SOGNIGBE</strong></td>
+      <td colspan="2"><strong>Tahsine SARHAN</strong></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan="2"><strong>Kenzo MOUNET</strong></td>
+      <td colspan="2"></td>
+    </tr>
+  </table>
+
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Développement d'une application Shiny d'analyse des ventes Amazon (Amazon Sales Dataset, Kaggle 2023) – rendu final pour le cours R &amp; Shiny (Caisse des Dépôts).</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Concevoir et développer une application Shiny complète avec une interface soignée (bslib).<br>
+        Visualiser les ventes, tendances et performances produits de façon interactive (plotly, DT).<br>
+        Intégrer des analyses statistiques multivariées (ACP avec FactoMineR, corrélations).<br>
+        Travailler en équipe : organisation, partage du code, cohérence de l'application.
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Application R Shiny (app.R + amazon_sales_dataset.csv)</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Bilan de la SAE</div>
+
+  <!-- Compétence 1 : Développer -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Développer</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="4">Apprentissages critiques sollicités</td>
+      <td>AC24.01VCOD : Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel (architecture, visualisation...)</td>
+    </tr>
+    <tr><td>AC24.02VCOD : Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</td></tr>
+    <tr><td>AC24.03VCOD : Prendre conscience des différences entre outils (logiciels, langages) pour choisir le plus adapté</td></tr>
+    <tr><td>AC24.04VCOD : Comprendre le cycle de vie d'un projet informatique</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Analyser les besoins (types d'analyses, KPIs) avant de concevoir l'architecture Shiny (UI/server).</td>
+    </tr>
+    <tr><td>Automatiser le reporting (réactivité Shiny) et assurer l'interopérabilité avec les données CSV Amazon.</td></tr>
+    <tr><td>Choisir R Shiny + bslib + plotly comme solution adaptée, tout en respectant le cycle de vie du projet.</td></tr>
+  </table>
+
+  <!-- Compétence 2 : Traiter -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Traiter</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="5">Apprentissages critiques sollicités</td>
+      <td>AC21.01 : Comprendre l'organisation des données de l'entreprise</td>
+    </tr>
+    <tr><td>AC21.02 : Réaliser le rôle central et spécifique de l'entrepôt de données dans la chaîne décisionnelle</td></tr>
+    <tr><td>AC21.03 : Identifier et résoudre les problèmes d'intégration de sources complémentaires et hétérogènes</td></tr>
+    <tr><td>AC21.04 : Comprendre la nécessité de tester, corriger et documenter un programme</td></tr>
+    <tr><td>AC21.05 : Apprécier l'intérêt de briques logicielles existantes et savoir les utiliser</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Comprendre la structure des données Amazon (colonnes, types, dates) avant de construire les indicateurs.</td>
+    </tr>
+    <tr><td>Tester, déboguer et documenter les fonctions réactives du dashboard.</td></tr>
+    <tr><td>Exploiter les packages existants (FactoMineR, plotly, DT, bslib) pour accélérer le développement.</td></tr>
+  </table>
+
+  <!-- Compétence 3 : Valoriser -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Valoriser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="4">Apprentissages critiques sollicités</td>
+      <td>AC23.01 : Saisir l'intérêt de mobiliser de manière proactive les ressources métiers liées à l'environnement (y compris économique, international...)</td>
+    </tr>
+    <tr><td>AC23.02 : Savoir défendre ses choix d'analyses</td></tr>
+    <tr><td>AC23.03 : Saisir la nécessité de choisir des indicateurs pertinents pour communiquer sur les résultats</td></tr>
+    <tr><td>AC23.04 : Prendre conscience de la rigueur requise dans ses productions et dans la communication à leur propos</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Contextualiser les données Amazon dans une problématique commerciale réelle (KPIs de vente, tendances).</td>
+    </tr>
+    <tr><td>Justifier les choix de visualisations et d'indicateurs retenus dans le dashboard.</td></tr>
+    <tr><td>Produire une application rigoureuse : code documenté, interface claire, résultats reproductibles.</td></tr>
+  </table>
+
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        Architecture Shiny (UI / server / réactivité).<br><br>
+        Composants bslib (cards, value boxes, bs_theme).<br><br>
+        Visualisations interactives : plotly, DT (tables).<br><br>
+        ACP avec FactoMineR et représentation avec factoextra.<br><br>
+        Données commerciales Amazon (ventes, dates, catégories).
+      </td>
+      <td>
+        Concevoir une interface Shiny multicouche (bslib + bsicons).<br><br>
+        Créer des visualisations interactives avec plotly et ggplot2.<br><br>
+        Implémenter une ACP réactive dans une app Shiny.<br><br>
+        Parser des dates dans différents formats (as.Date, format).<br><br>
+        Gérer les erreurs de chargement de fichiers (tryCatch).
+      </td>
+      <td>
+        Travail en équipe (Groupe 6) : organisation et répartition des modules.<br><br>
+        Sens du détail dans le design de l'interface (UX).<br><br>
+        Communication autour du code (lisibilité, commentaires).<br><br>
+        Respect des délais de livraison.
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">L'application est complète et bien structurée : elle combine visualisations commerciales (ventes, catégories) et analyses statistiques (ACP, corrélations) dans une seule interface. L'utilisation de bslib donne un aspect professionnel et moderne. Le travail en groupe a bien fonctionné grâce à une répartition claire des modules.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">La réactivité Shiny (reactive(), observe(), eventReactive()) n'est pas toujours facile à maîtriser, surtout quand plusieurs filtres interagissent. Pour une prochaine fois : mieux planifier l'architecture réactive en amont ; tester les modules séparément avant de les intégrer.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_amazon_shiny_1.png" alt="amazon_sales_dashboard.R structure" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_amazon_shiny_2.png" alt="amazon_sales_dashboard.R ACP section" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>

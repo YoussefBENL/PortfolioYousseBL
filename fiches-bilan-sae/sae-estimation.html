@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – Estimation statistique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">Estimation statistique et intervalles de confiance</td>
+    </tr>
+  </table>
+
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Estimation de la magnitude stellaire (Vmag) à partir d'échantillons de tailles différentes (n=30 et n=100) : construction d'intervalles de confiance à 95% et 99%, et tests de comparaison de moyennes.</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Construire des intervalles de confiance (IC) à 95% et 99% pour la moyenne.<br>
+        Comparer les IC selon la taille de l'échantillon (n=30 vs n=100).<br>
+        Réaliser des tests de comparaison de moyennes (z-test, test de Student).<br>
+        Interpréter les résultats et discuter l'impact de la taille de l'échantillon sur la précision.
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Script R commenté, rapport d'analyse</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Bilan de la SAE</div>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Analyser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="3">Apprentissages critiques sollicités</td>
+      <td>AC22.01 : Sélectionner les méthodes statistiques adaptées à la problématique</td>
+    </tr>
+    <tr><td>AC22.02 : Mettre en œuvre les méthodes statistiques</td></tr>
+    <tr><td>AC22.03 : Analyser et interpréter les résultats produits</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Choisir la bonne loi (loi normale / Student) selon la taille de l'échantillon et la connaissance de σ.</td>
+    </tr>
+    <tr><td>Calculer correctement les bornes des IC (qnorm, qt selon le cas).</td></tr>
+    <tr><td>Interpréter les résultats : plus l'échantillon est grand, plus l'IC est précis (plus étroit).</td></tr>
+  </table>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Traiter</td>
+    </tr>
+    <tr>
+      <td class="lb">Apprentissages critiques sollicités</td>
+      <td>AC21.01 : Comprendre l'organisation des données de l'entreprise</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="2">Composantes essentielles à respecter</td>
+      <td>Comprendre la structure des fichiers de données (vmag30, vmag100, Star39552_balanced).</td>
+    </tr>
+    <tr><td>Distinguer population (étoiles), échantillons (vmag30, vmag100) et moyenne théorique µ.</td></tr>
+  </table>
+
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        Loi des grands nombres et théorème central limite.<br><br>
+        Intervalles de confiance (loi normale : qnorm, loi de Student : qt).<br><br>
+        Tests d'hypothèses : H0, p-value, région de rejet.<br><br>
+        Statistique de test Tn (z-test sur la moyenne).<br><br>
+        Différence entre IC à 95% et 99% (impact du risque alpha).
+      </td>
+      <td>
+        Lire et analyser des données astronomiques en R (Vmag).<br><br>
+        Calculer la moyenne, variance empirique et IC avec R.<br><br>
+        Implémenter la formule de l'IC : µ ± z_{α/2} × √(s²/n).<br><br>
+        Réaliser un test de comparaison de moyenne (H0: µ=8) et calculer Tn.<br><br>
+        Visualiser les distributions avec boxplot et histogramme.
+      </td>
+      <td>
+        Rigueur mathématique : bien distinguer paramètre / estimateur.<br><br>
+        Précision dans les calculs (ne pas confondre σ et s).<br><br>
+        Méthode : suivre les étapes du test (H0/H1, statistique, région critique, conclusion).<br><br>
+        Curiosité pour le domaine d'application (astronomie).
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">La comparaison des IC pour n=30 et n=100 est bien illustrée : on observe clairement que l'IC à 95% est plus étroit avec n=100, ce qui confirme empiriquement le théorème central limite. Le code R est bien commenté et les visualisations (boxplot, histogramme) aident à comprendre la distribution de la Vmag.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">La distinction entre test unilatéral et bilatéral, et le choix du bon quantile (qnorm vs qt) selon le contexte, n'est pas toujours automatique. Pour une prochaine fois : créer un tableau récapitulatif des cas (n grand/petit, σ connue/inconnue) pour choisir la bonne approche ; s'entraîner sur des exemples variés (pas uniquement astronomie).</p>
+    </div>
+  </div>
+
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_estimation_1.png" alt="sae est.R code IC" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_estimation_2.png" alt="SAEICtests.R IC Normal Student" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>

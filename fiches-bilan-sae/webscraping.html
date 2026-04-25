@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – WebScraping &amp; API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">WebScraping et enrichissement de données par API</td>
+    </tr>
+  </table>
+
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Enrichissement d'un fichier d'établissements (SIRET) avec des coordonnées GPS via l'API adresse.data.gouv.fr et collecte de données complémentaires par webscraping (Selenium, BeautifulSoup).</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Automatiser la collecte et l'enrichissement de données à partir de sources web et d'APIs REST.<br>
+        Utiliser Python (requests, Selenium, BeautifulSoup) pour scraper des pages dynamiques.<br>
+        Consommer l'API adresse.data.gouv.fr pour géolocaliser des établissements.<br>
+        Nettoyer et structurer les données enrichies dans un fichier CSV.
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Scripts Python (D.py, S2.py, S3.py), fichiers CSV enrichis avec coordonnées GPS</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Bilan de la SAE</div>
+
+  <!-- Compétence 1 : Développer -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Développer</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="3">Apprentissages critiques sollicités</td>
+      <td>AC24.01VCOD : Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel (architecture, visualisation...)</td>
+    </tr>
+    <tr><td>AC24.02VCOD : Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</td></tr>
+    <tr><td>AC24.03VCOD : Prendre conscience des différences entre outils (logiciels, langages) pour choisir le plus adapté</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Analyser le besoin (géolocalisation d'établissements) avant de choisir l'outil adapté (API vs scraping).</td>
+    </tr>
+    <tr><td>Automatiser les appels API en boucle et assurer l'interopérabilité avec le CSV d'entrée.</td></tr>
+    <tr><td>Choisir Python (requests, Selenium, BeautifulSoup) comme langage adapté à la collecte web.</td></tr>
+  </table>
+
+  <!-- Compétence 2 : Traiter -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Traiter</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="4">Apprentissages critiques sollicités</td>
+      <td>AC21.01 : Comprendre l'organisation des données de l'entreprise</td>
+    </tr>
+    <tr><td>AC21.03 : Identifier et résoudre les problèmes d'intégration de sources complémentaires et hétérogènes</td></tr>
+    <tr><td>AC21.04 : Comprendre la nécessité de tester, corriger et documenter un programme</td></tr>
+    <tr><td>AC21.05 : Apprécier l'intérêt de briques logicielles existantes et savoir les utiliser</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Comprendre la structure du fichier SIRET (colonnes, types, valeurs manquantes) avant de l'enrichir.</td>
+    </tr>
+    <tr><td>Résoudre les problèmes d'intégration (NaN, encodage, valeurs NULL renvoyées par l'API).</td></tr>
+    <tr><td>Utiliser les bibliothèques existantes (pandas, requests) plutôt que tout réécrire.</td></tr>
+  </table>
+
+  <!-- Compétence 3 : Analyser -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Analyser</td>
+    </tr>
+    <tr>
+      <td class="lb">Apprentissages critiques sollicités</td>
+      <td>AC22.05 : Apprécier les limites de validité et les conditions d'application d'une analyse</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="2">Composantes essentielles à respecter</td>
+      <td>Vérifier la qualité des coordonnées GPS retournées (cohérence géographique, score de confiance de l'API).</td>
+    </tr>
+    <tr><td>Connaître les limites : taux de réponse de l'API, adresses non trouvées, doublons.</td></tr>
+  </table>
+
+  <!-- Compétence 4 : Valoriser -->
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Valoriser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="2">Apprentissages critiques sollicités</td>
+      <td>AC23.01 : Saisir l'intérêt de mobiliser de manière proactive les ressources métiers liées à l'environnement (y compris économique, international...)</td>
+    </tr>
+    <tr><td>AC23.02 : Savoir défendre ses choix d'analyses</td></tr>
+    <tr>
+      <td class="lb" rowspan="2">Composantes essentielles à respecter</td>
+      <td>Exploiter l'API publique de l'État (adresse.data.gouv.fr) comme ressource métier disponible gratuitement.</td>
+    </tr>
+    <tr><td>Justifier le choix de l'API vs scraping selon le type de donnée à collecter.</td></tr>
+  </table>
+
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        Protocoles HTTP/REST, structure JSON.<br><br>
+        Format HTML/CSS (pour le parsing avec BeautifulSoup).<br><br>
+        Fonctionnement de l'API adresse.data.gouv.fr.<br><br>
+        Gestion des données tabulaires avec pandas.
+      </td>
+      <td>
+        Écrire des scripts Python structurés et commentés.<br><br>
+        Utiliser requests pour les appels API et BeautifulSoup pour le scraping.<br><br>
+        Automatiser le traitement ligne par ligne sur un DataFrame pandas.<br><br>
+        Gérer les erreurs et les valeurs manquantes (pandas.isna).
+      </td>
+      <td>
+        Autonomie dans la résolution des problèmes techniques.<br><br>
+        Rigueur (respect des conditions d'utilisation des APIs).<br><br>
+        Persévérance face aux blocages (pagination, erreurs HTTP).<br><br>
+        Curiosité pour les nouvelles sources de données.
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">Le script D.py est bien structuré et commenté : la fonction de formatage des adresses (f()) permet de gérer proprement les valeurs manquantes avant d'envoyer les requêtes à l'API. La géolocalisation automatique de 1 000 établissements à partir de leurs adresses est fonctionnelle et produit un CSV enrichi exploitable.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">La gestion de Selenium pour les pages dynamiques était plus complexe que prévu (chargement asynchrone, délais). Pour une prochaine fois : anticiper la gestion des délais entre requêtes pour ne pas surcharger les serveurs ; tester sur un petit échantillon avant de lancer sur l'ensemble des données.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_webscraping_1.png" alt="Script D.py API géocodage" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_webscraping_2.png" alt="Script S3.py API simplifiée" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>

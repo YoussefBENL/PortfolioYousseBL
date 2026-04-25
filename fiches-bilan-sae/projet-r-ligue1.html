@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – Projet R Shiny Ligue 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">Application R Shiny – Analyse des données Ligue 1</td>
+    </tr>
+    <tr>
+    <tr>
+      <td class="lb">Coéquipiers :</td>
+      <td colspan="2"><strong>Tahsine SARHAN</strong></td>
+      <td colspan="2"><strong>Kenzo MOUNET</strong></td>
+    </tr>
+  </table>
+
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Développement d'un dashboard interactif R Shiny pour l'analyse des joueurs de Ligue 1 (statistiques individuelles : buts, note, cote, titularisations) avec filtres dynamiques et visualisations.</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Développer une application Shiny avec shinydashboard (sidebar, menu, tabItems).<br>
+        Créer des visualisations interactives (ggplot2) filtrables par poste, club et seuil de titularisation.<br>
+        Présenter des statistiques descriptives et des tableaux de données (DT).<br>
+        Travailler en groupe avec une architecture de code modulaire (MAIN.R + Fonctions.R).
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Application R Shiny (BEN-LTAIEF_SARHAN_MOUNET_MAIN.R + BEN-LTAIEF_SARHAN_MOUNET_Fonctions.R)</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Bilan de la SAE</div>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Valoriser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="3">Apprentissages critiques sollicités</td>
+      <td>AC23.01 : Mobiliser des ressources métiers liées à l'environnement</td>
+    </tr>
+    <tr><td>AC23.02 : Défendre ses choix d'analyses</td></tr>
+    <tr><td>AC23.05 : Adapter la communication à l'interlocuteur</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Application lisible et navigable : menus clairs, onglets bien nommés (Analyse, Stats, Infos, Données).</td>
+    </tr>
+    <tr><td>Visualisations adaptées aux données sportives (variables : Buts, Note, Cote, %Titu, Poste, Club).</td></tr>
+    <tr><td>Défendre les choix de filtres et d'indicateurs lors de la présentation.</td></tr>
+  </table>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Analyser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="2">Apprentissages critiques sollicités</td>
+      <td>AC22.02 : Mettre en œuvre les méthodes statistiques</td>
+    </tr>
+    <tr><td>AC22.03 : Analyser et interpréter les résultats produits</td></tr>
+    <tr>
+      <td class="lb" rowspan="2">Composantes essentielles à respecter</td>
+      <td>Statistiques descriptives (moyenne, distribution) par groupe (poste, club).</td>
+    </tr>
+    <tr><td>Interprétation des résultats dans le contexte du football (Ligue 1).</td></tr>
+  </table>
+
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        Architecture shinydashboard (dashboardPage, dashboardSidebar, dashboardBody).<br><br>
+        Composants Shiny : selectInput, sliderInput, box, tabItem.<br><br>
+        Manipulation de données R : dplyr (filter, mutate, summarise).<br><br>
+        Lecture de fichiers Excel (readxl).
+      </td>
+      <td>
+        Concevoir une interface Shiny avec sidebar menu et plusieurs onglets.<br><br>
+        Créer des graphiques ggplot2 réactifs (histogrammes, boxplots, barres).<br><br>
+        Implémenter des filtres interactifs (sliderInput, selectInput).<br><br>
+        Séparer le code en MAIN.R et Fonctions.R pour la modularité.<br><br>
+        Afficher des tables interactives avec le package DT.
+      </td>
+      <td>
+        Travail en équipe : répartition des modules, relecture croisée.<br><br>
+        Esprit de synthèse (ne pas surcharger l'interface).<br><br>
+        Capacité à présenter et défendre le dashboard à l'oral.<br><br>
+        Rigueur dans le nommage et l'organisation des fichiers.
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">La structure de l'application est claire et bien organisée : le découpage en MAIN.R (interface + server) et Fonctions.R (fonctions réutilisables) rend le code lisible et maintenable. Les filtres (sliderInput pour %Titu, selectInput pour poste/club) sont pertinents et permettent une exploration efficace des données Ligue 1.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">La synchronisation entre les filtres globaux et les différents onglets n'était pas toujours cohérente (un filtre posé dans un onglet ne s'appliquait pas à un autre). Pour une prochaine fois : utiliser des reactiveValues partagées entre modules ; tester l'application avec plusieurs utilisateurs simulés pour détecter les incohérences.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_ligue1_1.png" alt="MAIN.R Shiny UI Ligue 1" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_ligue1_2.png" alt="Fonctions.R ggplot2 histogram boxplot" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>

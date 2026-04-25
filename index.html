@@ -1,0 +1,1109 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef BEN LTAIEF — Data Analyst | Business Intelligence | ETL | Python R SQL</title>
+    <meta name="description" content="Portfolio de Youssef BEN LTAIEF, étudiant BUT Science des Données — Data Analyst, Business Intelligence, ETL, Data Cleaning, KPI, Data Pipeline, Python, R, SQL, Power BI.">
+    
+    <meta property="og:title" content="Youssef BEN LTAIEF - Portfolio Data Analyst">
+    <meta property="og:description" content="Étudiant en BUT Science des Données. Découvrez mes projets en Python, R, SQL et Power BI. À la recherche d'une alternance !">
+    <meta property="og:image" content="https://youssefbenltaief.fr/images/apercu-linkedin.jpg">
+    <meta property="og:url" content="https://youssefbenltaief.fr/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Youssef BEN LTAIEF - Portfolio Data Analyst">
+    <meta name="twitter:description" content="Étudiant en BUT Science des Données. Découvrez mes projets en Python, R, SQL et Power BI.">
+    <meta name="twitter:image" content="images/apercu-linkedin.jpg">
+    <link rel="icon" type="image/x-icon" href="images/favicon.avif">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Youssef BEN LTAIEF",
+      "url": "https://youssefbenl.github.io/PortfolioYousseBL/",
+      "sameAs": ["https://linkedin.com/in/YoussefBENLTAIEF"],
+      "jobTitle": "Data Analyst",
+      "description": "Étudiant en BUT Science des Données, spécialisé en Data Engineering, BI, ETL et visualisation.",
+      "knowsAbout": ["Python", "R", "SQL", "Power BI", "SAS", "Business Intelligence"]
+    }
+    </script>
+    <link rel="preload" href="images/pfp.avif" as="image">
+    <link rel="preload" href="images/projet_dataviz.avif" as="image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" as="style">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash-screen">
+        <div class="splash-bg"></div>
+        <div class="splash-overlay"></div>
+        <div class="splash-content">
+            <div class="splash-tag">Portfolio</div>
+            <h1 class="splash-name">Youssef<br>Ben Ltaief</h1>
+            <p class="splash-title">DATA ANALYST</p>
+            <p class="splash-sub"><i class="fas fa-briefcase"></i> Recherche d'alternance</p>
+            <button class="splash-enter" onclick="enterPortfolio()">
+                Explorer le portfolio <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="splash-scroll-hint" onclick="enterPortfolio()"><i class="fas fa-chevron-down"></i></div>
+    </div>
+
+    <a href="#presentation" class="sr-only" style="position:absolute;top:0;left:0;padding:8px;background:#000;color:#fff;z-index:1001;">Aller au contenu</a>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <div id="emailToast" class="toast-notif">Adresse email copiée</div>
+	<div id="successToast" class="toast-notif" style="background-color: #3498db; box-shadow: 0 10px 30px rgba(52,152,219,0.4);">Message envoyé avec succès !</div>
+    <div id="errorToast" class="toast-notif" style="background-color: #e74c3c; box-shadow: 0 10px 30px rgba(231,76,60,0.4);">Une erreur est survenue.</div>
+
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <nav class="navbar" aria-label="Navigation principale">
+        <ul class="nav-links nav-left" id="main-nav-links">
+            <li><a href="#outils" data-section="outils">Stack</a></li>
+            <li><a href="#competences" data-section="competences">Compétences</a></li>
+        </ul>
+        <div class="logo">
+            <a href="#presentation" class="logo-link">Youssef<span class="dot secret-trigger" data-bs-toggle="modal" data-bs-target="#modalTerminal" title="Cliquez ici...">.</span></a>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links nav-right-links">
+                <li><a href="#all-projects" data-section="all-projects">Projets</a></li>
+
+                <li><a href="#contact-form" data-section="contact-form">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Basculer le thème clair / sombre"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+    <section id="presentation" class="hero-section">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="profile-card" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="profile-visual">
+                    <div class="avatar-circle">
+                        <img src="images/pfp.avif" alt="Portrait de Youssef BEN LTAIEF" class="profile-photo" loading="eager">
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <span class="greeting">Bonjour, je suis</span>
+                    <h1>Youssef BEN LTAIEF</h1>
+                    <h2 class="role">Étudiant en Science des Données — <span class="highlight" id="typed-text"></span></h2>
+                    <p>
+                        Actuellement en BUT Science des Données à l’IUT Paris Rives de Seine, je travaille sur des projets concrets autour de la donnée, de sa préparation jusqu’à son exploitation.<br><br>
+                        Mon objectif est simple : partir de données souvent imparfaites, les structurer, puis en tirer des analyses claires et utiles pour la prise de décision. Je m’intéresse particulièrement à l’automatisation des traitements, à l’analyse statistique et à la création d’outils de visualisation efficaces.
+                    </p>
+                    <div class="profile-actions">
+                        <button onclick="triggerConfettiAndDownload()" class="btn btn-primary-custom">
+                            <i class="fas fa-download"></i> Mon CV
+                        </button>
+                        <a id="real-cv-link" href="CV_YOUSSEF_BEN_LTAIEF.pdf" target="_blank" style="display: none;"></a>
+                        <a href="#all-projects" class="btn btn-outline-custom">Voir mes projets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scroll-down-arrow" class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+    </section>
+    <section id="outils" class="tools-section">
+        <div class="container">
+            <p class="section-subtitle" data-aos="fade-up">Ma Stack Technique</p>
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Outils & Langages</h2>
+            <div class="tools-container">
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="200"><div class="tool-badge python"><i class="fab fa-python"></i> Python</div><div class="tool-cloud"><span>Pandas / NumPy</span><span>API & Requests</span><span>Web Scraping</span><span>Matplotlib</span></div></div>
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="300"><div class="tool-badge rlang"><i class="fas fa-code"></i> R Studio</div><div class="tool-cloud"><span>R Shiny</span><span>R Markdown</span><span>ggplot2</span><span>Dplyr</span></div></div>
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="400"><div class="tool-badge sql"><i class="fas fa-database"></i> SQL</div><div class="tool-cloud"><span>Requêtes complexes</span><span>Jointures</span><span>SGBD Relationnel</span></div></div>
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="500"><div class="tool-badge pbi"><i class="fas fa-chart-bar"></i> Power BI</div><div class="tool-cloud"><span>DAX</span><span>Power Query</span><span>Tableaux de bord</span></div></div>
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="600"><div class="tool-badge excel"><i class="fas fa-file-excel"></i> Excel Expert</div><div class="tool-cloud"><span>TCD</span><span>VBA / Macros</span><span>Formules</span></div></div>
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="700"><div class="tool-badge sas"><i class="fas fa-cogs"></i> SAS</div><div class="tool-cloud"><span>Traitement Stats</span><span>Macro SAS</span></div></div>
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="800"><div class="tool-badge git"><i class="fab fa-git-alt"></i> Git</div><div class="tool-cloud"><span>GitHub</span><span>Versionning</span></div></div>
+                <div class="tool-wrapper" data-aos="fade-up" data-aos-delay="900"><div class="tool-badge cloud"><i class="fas fa-cloud"></i> Azure</div><div class="tool-cloud"><span>Cloud Computing</span><span>Services Data</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="competences-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Mes Compétences</h2>
+            <div class="matrix-grid">
+                <div class="matrix-card col-blue" data-tab="traiter" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Traiter</h3>
+                    <span class="card-sub">Les données</span>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Nettoyage et structuration de données brutes</li>
+                        <li><i class="fas fa-check"></i> Mise en place de traitements automatisés (ETL)</li>
+                        <li><i class="fas fa-check"></i> Intégration de données issues de sources multiples</li>
+                    </ul>
+                </div>
+                <div class="matrix-card col-green" data-tab="analyser" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Analyser</h3>
+                    <span class="card-sub">Statistiquement</span>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Analyse exploratoire pour comprendre les données</li>
+                        <li><i class="fas fa-check"></i> Modélisation statistique adaptée aux problématiques</li>
+                        <li><i class="fas fa-check"></i> Tests d’hypothèses et interprétation des résultats</li>
+                    </ul>
+                </div>
+                <div class="matrix-card col-orange" data-tab="valoriser" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Valoriser</h3>
+                    <span class="card-sub">La production</span>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Création de tableaux de bord orientés décision</li>
+                        <li><i class="fas fa-check"></i> Production de reportings clairs et synthétiques</li>
+                        <li><i class="fas fa-check"></i> Capacité à expliquer et valoriser les résultats</li>
+                    </ul>
+                </div>
+                <div class="matrix-card col-purple" data-tab="developper" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Développer</h3>
+                    <span class="card-sub">Outils décisionnels</span>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Développement de dashboards interactifs</li>
+                        <li><i class="fas fa-check"></i> Création d’outils d’analyse avec R et Python</li>
+                        <li><i class="fas fa-check"></i> Automatisation de tâches et de traitements</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMPETENCES POPUP -->
+    <div id="comp-popup" aria-modal="true" role="dialog">
+        <div class="comp-popup-backdrop" id="comp-popup-backdrop"></div>
+        <div class="comp-popup-box">
+            <div class="comp-popup-header">
+                <h3 id="comp-popup-title"></h3>
+                <button class="comp-popup-close" aria-label="Fermer" id="comp-popup-close-btn">&times;</button>
+            </div>
+            <div class="comp-popup-body" id="comp-popup-body"></div>
+        </div>
+    </div>
+
+    <!-- Apport data (hidden) -->
+    <div id="apport-panel" style="display:none;">
+        <div class="apport-tab" data-panel="traiter">
+            <div class="comp-popup-grid">
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-broom"></i></div><h4>Nettoyer et structurer vos données</h4><p>Je transforme des données désorganisées (Excel, CSV, SQL) en datasets propres et directement exploitables.</p></div>
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-database"></i></div><h4>Concevoir vos bases de données</h4><p>Je conçois des bases de données structurées et adaptées aux besoins métier (SQL, Merise, SGBD).</p></div>
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-project-diagram"></i></div><h4>Construire un Data Pipeline fiable</h4><p>Je mets en place des flux de données pour connecter plusieurs sources et assurer leur cohérence.</p></div>
+            </div>
+        </div>
+        <div class="apport-tab" data-panel="analyser">
+            <div class="comp-popup-grid">
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-chart-line"></i></div><h4>Produire des analyses statistiques</h4><p>Je réalise des analyses statistiques pour comprendre les données et en tirer des conclusions exploitables (R, Stats inférentielles).</p></div>
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-brain"></i></div><h4>Modélisation prédictive</h4><p>Je construis des modèles pour anticiper les tendances et prendre des décisions basées sur les données.</p></div>
+            </div>
+        </div>
+        <div class="apport-tab" data-panel="valoriser">
+            <div class="comp-popup-grid">
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-chart-bar"></i></div><h4>Créer des dashboards décisionnels</h4><p>Je conçois des dashboards clairs et utiles, pensés pour faciliter la prise de décision (BI, Reporting).</p></div>
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-file-excel"></i></div><h4>Automatiser vos tâches Excel</h4><p>J'automatise des tâches répétitives pour gagner du temps et réduire les erreurs humaines (VBA, Macros).</p></div>
+            </div>
+        </div>
+        <div class="apport-tab" data-panel="developper">
+            <div class="comp-popup-grid">
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-laptop-code"></i></div><h4>Développer des applications R &amp; Python</h4><p>Je crée des outils d'analyse interactifs (Shiny, Streamlit) et des scripts automatisés adaptés à vos besoins.</p></div>
+                <div class="comp-popup-card"><div class="apport-icon"><i class="fas fa-project-diagram"></i></div><h4>Mettre en place des pipelines de données</h4><p>Je construis des pipelines robustes pour automatiser le flux entre vos différents systèmes (ETL, SQL, Python).</p></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="all-projects" class="projets-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Tous les projets</h2>
+            
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="sql">SQL</button>
+                <button class="filter-btn" data-filter="r">R Studio</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-item" data-category="python" data-bs-toggle="modal" data-bs-target="#modalPythonAPI">
+                    <div class="project-thumb">
+                        <div class="interactive-sticker"><i class="fas fa-mouse-pointer"></i> Démonstration</div>
+                        <img src="images/Webscraping & API.avif" alt="Python API" loading="lazy">
+                        <div class="project-overlay"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="project-body"><h4>Webscraping & API</h4><p>Géocodage et requêtage API automatisé.</p><div class="tags"><span>Python</span><span>API</span></div><a href="fiches-bilan-sae/webscraping.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div>
+                </div>
+
+                <div class="project-item" data-category="python" data-bs-toggle="modal" data-bs-target="#modalPythonCleaning">
+                    <div class="project-thumb">
+                        <div class="interactive-sticker"><i class="fas fa-mouse-pointer"></i> Démonstration</div>
+                        <img src="images/projet_python.avif" alt="Python Cleaning" loading="lazy">
+                        <div class="project-overlay"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="project-body"><h4>Script ETL Python</h4><p>Transformation de données complexes en données structurées exploitables.</p><div class="tags"><span>Python</span><span>Pandas</span></div></div>
+                </div>
+                
+                <div class="project-item" data-category="r" data-bs-toggle="modal" data-bs-target="#modalRATP"><div class="project-thumb"><img src="images/projet_ratp.avif" alt="Séries Temporelles" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Analyse Séries Temporelles</h4><p>Analyse de données temporelles pour identifier des tendances et produire des prévisions.</p><div class="tags"><span>R</span><span>Time Series</span></div><a href="fiches-bilan-sae/serie-temporelle.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+                <div class="project-item" data-category="sql" data-bs-toggle="modal" data-bs-target="#modalLAC"><div class="project-thumb"><img src="images/projet_lac.avif" alt="SQL" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Boutique de Location</h4><p>Requêtage SQL & Dashboards Excel.</p><div class="tags"><span>SQL</span><span>Excel</span></div></div></div>
+                <div class="project-item" data-category="r" data-bs-toggle="modal" data-bs-target="#modalHappiness"><div class="project-thumb"><img src="images/projet_happiness.avif" alt="Happiness" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>World Happiness Report</h4><p>Analyse de données internationales et création de visualisations pour en faciliter la compréhension.</p><div class="tags"><span>R</span><span>ggplot2</span></div></div></div>
+                <div class="project-item" data-category="autre" data-bs-toggle="modal" data-bs-target="#modalEnquete"><div class="project-thumb"><img src="images/projet_enquete.avif" alt="Enquete" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Enquête Culture</h4><p>Conception, collecte et analyse d’un questionnaire pour en tirer des insights exploitables.</p><div class="tags"><span>LimeSurvey</span><span>Excel</span></div></div></div>
+
+                <div class="project-item" data-category="autre" data-bs-toggle="modal" data-bs-target="#modalRGPD"><div class="project-thumb"><img src="images/projet_data.avif" alt="RGPD" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Conformité RGPD</h4><p>Analyse réglementaire et mise en conformité RGPD d'une base de données.</p><div class="tags"><span>RGPD</span><span>Réglementation</span></div><a href="fiches-bilan-sae/rgpd.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+
+                <div class="project-item" data-category="r" data-bs-toggle="modal" data-bs-target="#modalStatTests"><div class="project-thumb"><img src="images/projet_regression.avif" alt="Tests Statistiques" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Tests Statistiques – CardioGoodFitness</h4><p>Analyse exploratoire et tests statistiques sur un jeu de données fitness.</p><div class="tags"><span>R</span><span>Statistiques</span></div><a href="fiches-bilan-sae/stat-tests.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+
+                <div class="project-item" data-category="r" data-bs-toggle="modal" data-bs-target="#modalFactorielles"><div class="project-thumb"><img src="images/projet_ai.avif" alt="Méthodes Factorielles" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Méthodes Factorielles (ACP, AFC, ACM, MDS)</h4><p>Rapport d'analyse multivariée complet avec réduction de dimension et interprétation.</p><div class="tags"><span>R</span><span>ACP</span><span>FactoMineR</span></div><a href="fiches-bilan-sae/methodes-factorielles.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+
+                <div class="project-item" data-category="r" data-bs-toggle="modal" data-bs-target="#modalAmazon"><div class="project-thumb"><img src="images/projet_amazon.jpg" alt="R Shiny Amazon" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Tableau de bord R Shiny – Amazon Sales</h4><p>Application décisionnelle interactive d'analyse des ventes Amazon avec shinydashboard.</p><div class="tags"><span>R Shiny</span><span>Dashboard</span></div><a href="fiches-bilan-sae/app-shiny-amazon.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+
+                <div class="project-item" data-category="r" data-bs-toggle="modal" data-bs-target="#modalLigue1"><div class="project-thumb"><img src="images/projet_ligue1.jpg" alt="R Shiny Ligue 1" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Application R Shiny – Ligue 1</h4><p>Application d'analyse interactive des performances des clubs de football de Ligue 1.</p><div class="tags"><span>R Shiny</span><span>ggplot2</span></div><a href="fiches-bilan-sae/projet-r-ligue1.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+
+                <div class="project-item" data-category="autre" data-bs-toggle="modal" data-bs-target="#modalDevWeb"><div class="project-thumb"><img src="images/projet_webdev.avif" alt="Dev Web" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Portfolio Web (HTML/CSS/Bootstrap)</h4><p>Développement d'un portfolio personnel responsive avec HTML, CSS et Bootstrap 5.</p><div class="tags"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div><a href="fiches-bilan-sae/dev-web.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+
+                <div class="project-item" data-category="r" data-bs-toggle="modal" data-bs-target="#modalEstimation"><div class="project-thumb"><img src="images/projet_estimation.avif" alt="Estimation Statistique" loading="lazy"><div class="project-overlay"><i class="fas fa-plus"></i></div></div><div class="project-body"><h4>Estimation Statistique & Intervalles de Confiance</h4><p>Estimation de paramètres et construction d'intervalles de confiance en R.</p><div class="tags"><span>R</span><span>Statistiques</span></div><a href="fiches-bilan-sae/sae-estimation.html" class="fiche-badge" onclick="event.stopPropagation()" target="_blank">📋 Fiche bilan</a></div></div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <section id="contact-form" class="contact-form-section">
+        <div class="container">
+            <p class="section-subtitle" data-aos="fade-up">Discutons</p>
+            <h2 class="section-title" data-aos="fade-up">Envoyez-moi un message</h2>
+            <p class="section-desc text-center" data-aos="fade-up" style="color: var(--text-muted); margin-bottom: 40px;">Remplissez le formulaire ci-dessous pour me contacter directement.</p>
+            
+            <div class="contact-form-layout" data-aos="fade-up" data-aos-delay="100">
+                <div class="form-container">
+                    <form action="https://formspree.io/f/mzzrwegn" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="name" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control custom-input" id="name" name="name" required placeholder="Youssef BEN LTAIEF">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="email" class="form-label">Adresse Email</label>
+                                <input type="email" class="form-control custom-input" id="email" name="email" required placeholder="Bentaief.youssef@email.com">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <input type="text" class="form-control custom-input" id="subject" name="subject" required placeholder="Proposition d'alternance">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control custom-input" id="message" name="message" rows="6" required placeholder="Votre message ici..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary-custom" style="width: 100%; max-width: 300px;">
+                                <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="linkedin-badge-slot">
+                    <div class="linkedin-badge linkedin-badge-light">
+                        <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="youssefbenltaief" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/youssefbenltaief?trk=profile-badge">Youssef BEN LTAIEF</a></div>
+                    </div>
+                    <div class="linkedin-badge linkedin-badge-dark">
+                        <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="youssefbenltaief" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/youssefbenltaief?trk=profile-badge">Youssef BEN LTAIEF</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Parlons de votre projet data</h2>
+            <div class="footer-contact-layout" data-aos="fade-up">
+                <button onclick="copyEmail(event)" class="footer-contact-btn" title="Copier mon adresse email">
+                    <i class="fas fa-envelope"></i> Copier mon Email
+                </button>
+            </div>
+
+            <div class="social-links" data-aos="fade-up">
+                <a href="mailto:bentaief.youssef@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/YoussefBENLTAIEF" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="CV_YOUSSEF_BEN_LTAIEF.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
+            </div>
+
+            <p class="copyright">&copy; 2026 Youssef BEN LTAIEF. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <div class="modal fade" id="modalRATP" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Séries Temporelles CO2 — Station Châtelet (R)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="sae-badge"><strong>SAÉ Séries Temporelles</strong> — Analyse, Décomposition &amp; Prévisions</span>
+                    <p>Analyse des concentrations de CO2 (ppm) mesurées à la station de métro <strong>Châtelet</strong> entre 2018 et 2025. Objectif : comprendre l'évolution de la qualité de l'air, identifier l'impact du confinement Covid-19 (chute brutale en 2020), et comparer trois méthodes de prévision jusqu'à fin 2025.</p>
+                    <div class="etl-interactive-container mt-4">
+                        <h6 class="text-center mb-3" style="font-size:1.1rem; color:var(--primary);"><i class="fas fa-code"></i> Pipeline d'analyse — Code R</h6>
+                        <ul class="nav nav-pills justify-content-center mb-3" id="ratp-tabs" role="tablist">
+                            <li class="nav-item" role="presentation"><button class="nav-link active" id="ratp-context-tab" data-bs-toggle="pill" data-bs-target="#ratp-context" type="button" role="tab">1. Données &amp; Nettoyage</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="ratp-decomp-tab" data-bs-toggle="pill" data-bs-target="#ratp-decomp" type="button" role="tab">2. Décomposition</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="ratp-forecast-tab" data-bs-toggle="pill" data-bs-target="#ratp-forecast" type="button" role="tab">3. Prévisions</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="ratp-results-tab" data-bs-toggle="pill" data-bs-target="#ratp-results" type="button" role="tab">4. Résultats</button></li>
+                        </ul>
+                        <div class="tab-content p-3 border rounded" style="background:var(--bg-body); min-height:320px;">
+                            <div class="tab-pane fade show active" id="ratp-context" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Fusion de deux fichiers CSV (2013–2020 et 2020–2025), nettoyage des valeurs tronquées (symbole <code>&lt;</code>), agrégation en moyennes journalières et calcul de moyennes mobiles MM7, MM30 et MM365.</p>
+                                <div style="max-height:260px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#c586c0;">library</span>(tidyverse); <span style="color:#c586c0;">library</span>(lubridate); <span style="color:#c586c0;">library</span>(zoo); <span style="color:#c586c0;">library</span>(forecast)
+
+data1 &lt;- read_csv2(<span style="color:#ce9178;">"chatelet_2013_2020.csv"</span>) %&gt;% select(<span style="color:#ce9178;">"DATE/HEURE"</span>, CO2) %&gt;%
+  mutate(CO2 = as.numeric(str_replace(CO2, <span style="color:#ce9178;">"&lt;"</span>, <span style="color:#ce9178;">""</span>)))
+data2 &lt;- read_csv2(<span style="color:#ce9178;">"chatelet_2020_2025.csv"</span>) %&gt;% select(<span style="color:#ce9178;">"DATE/HEURE"</span>, CO2) %&gt;%
+  mutate(CO2 = as.numeric(str_replace(CO2, <span style="color:#ce9178;">"&lt;"</span>, <span style="color:#ce9178;">""</span>)))
+
+CO2_jour &lt;- bind_rows(data1, data2) %&gt;%
+  rename(DateHeure = <span style="color:#ce9178;">"DATE/HEURE"</span>) %&gt;%
+  mutate(DateHeure = ymd_hms(DateHeure), Date = as_date(DateHeure)) %&gt;%
+  filter(DateHeure &gt;= <span style="color:#ce9178;">"2018-11-22"</span>) %&gt;%
+  group_by(Date) %&gt;% summarise(CO2_moy = mean(CO2, na.rm = TRUE)) %&gt;%
+  mutate(mm7 = rollmean(CO2_moy, 7, fill=NA, align=<span style="color:#ce9178;">"right"</span>),
+         mm30 = rollmean(CO2_moy, 30, fill=NA, align=<span style="color:#ce9178;">"right"</span>),
+         mm365 = rollmean(CO2_moy, 365, fill=NA, align=<span style="color:#ce9178;">"right"</span>))</code></div>
+                            </div>
+                            <div class="tab-pane fade" id="ratp-decomp" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Transformation en objet <code>ts</code> (fréquence 365 j/an) puis décomposition additive en <strong>tendance</strong>, <strong>saisonnalité</strong> et <strong>résidus</strong>.</p>
+                                <div style="max-height:260px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;">CO2_ts &lt;- ts(CO2_jour$CO2_moy,
+             start = c(year(min(CO2_jour$Date)), yday(min(CO2_jour$Date))),
+             frequency = 365)
+
+<span style="color:#6a9955;"># Décomposition additive</span>
+decomp &lt;- decompose(CO2_ts, type = <span style="color:#ce9178;">"additive"</span>)
+plot(decomp)
+
+<span style="color:#6a9955;"># Série désaisonnalisée + boxplot des résidus</span>
+CO2_deseason &lt;- CO2_ts - decomp$seasonal
+boxplot(decomp$random, main=<span style="color:#ce9178;">"Résidus"</span>, col=<span style="color:#ce9178;">"lightblue"</span>, horizontal=TRUE)</code></div>
+                                <div class="mt-3 p-2 rounded" style="background:rgba(52,152,219,0.1); border-left:4px solid var(--primary); font-size:0.85rem;"><i class="fas fa-info-circle"></i> <strong>Observation :</strong> Chute brutale du CO2 en 2020 (confinement Covid) puis remontée progressive. Saisonnalité ±40 ppm liée aux variations de fréquentation week-end / semaine.</div>
+                            </div>
+                            <div class="tab-pane fade" id="ratp-forecast" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Trois modèles comparés : <strong>SARMA</strong> (auto.arima), <strong>Holt-Winters</strong> additif, et <strong>Régression Polynomiale</strong> degré 2 sur série désaisonnalisée.</p>
+                                <div style="max-height:260px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;">h_days &lt;- as.numeric(as.Date(<span style="color:#ce9178;">"2025-12-31"</span>) - max(CO2_jour$Date))
+
+<span style="color:#6a9955;"># SARMA — sélection automatique via AIC</span>
+pred_sarma &lt;- forecast(auto.arima(CO2_ts), h = h_days)
+
+<span style="color:#6a9955;"># Holt-Winters additif</span>
+pred_hw &lt;- predict(HoltWinters(CO2_ts, seasonal = <span style="color:#ce9178;">"additive"</span>), n.ahead = h_days)
+
+<span style="color:#6a9955;"># Polynomiale degré 2 + réinjection saisonnalité</span>
+t &lt;- 1:length(CO2_deseason)
+reg_poly &lt;- lm(CO2_deseason ~ t + I(t^2))
+t_fut &lt;- (max(t)+1):(max(t)+h_days)
+pred_poly &lt;- predict(reg_poly, newdata=data.frame(t=t_fut)) +
+             rep(decomp$seasonal[1:365], length.out=h_days)</code></div>
+                            </div>
+                            <div class="tab-pane fade" id="ratp-results" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Évaluation des trois modèles sur la période de test (sept. 2024 → janv. 2025).</p>
+                                <div class="table-responsive"><table class="table table-sm table-bordered" style="font-size:0.85rem; background:var(--bg-card); color:var(--text-main);"><thead class="table-dark"><tr><th>Modèle</th><th>Forces</th><th>Limites</th></tr></thead><tbody><tr><td><strong style="color:#2ecc71;">SARMA</strong></td><td>RMSE le plus bas sur période test, prévisions stables</td><td>Peu réactif aux pics extrêmes</td></tr><tr><td><strong style="color:#3498db;">Holt-Winters</strong></td><td>Capture bien la saisonnalité court terme</td><td>Diverge sur horizon &gt;6 mois</td></tr><tr><td><strong style="color:#9b59b6;">Polynomiale</strong></td><td>Tendance globale lisible</td><td>Surestime la hausse sur longue période</td></tr></tbody></table></div>
+                                <div class="mt-2 p-2 rounded" style="background:rgba(46,204,113,0.1); border-left:4px solid #2ecc71; font-size:0.85rem;"><i class="fas fa-trophy"></i> <strong>Conclusion :</strong> SARMA est le modèle le plus fiable (~560 ppm en 2025). Holt-Winters est plus volatile mais précis à court terme. La régression polynomiale surestime la hausse tendancielle.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="mt-4">Stack</h6>
+                    <p><span class="badge bg-primary me-1">R</span><span class="badge bg-secondary me-1">tidyverse</span><span class="badge bg-secondary me-1">forecast</span><span class="badge bg-secondary me-1">auto.arima</span><span class="badge bg-secondary me-1">HoltWinters</span><span class="badge bg-secondary">R Markdown</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modalLAC" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Boutique de Location — Analyse & Dashboards</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>Projet Business</strong> — Modélisation SQL & Reporting</span><h6>Contexte professionnel</h6><p>Ce projet avait pour objectif d’analyser les performances d’une boutique de location à partir d’une base de données relationnelle. Le but était d'extraire les indicateurs clés pour faciliter la prise de décision métier.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Nettoyage et structuration d'un dataset complexe pour garantir la qualité et la cohérence des informations.</li><li><i class="fas fa-check"></i> Requêtage de la base avec SQL (SELECT, JOIN, agrégations) pour calculer le chiffre d’affaires, le volume de ventes et les produits les plus loués.</li><li><i class="fas fa-check"></i> Identification des tendances importantes telles que les périodes de forte activité.</li><li><i class="fas fa-check"></i> Conception de tableaux de bord dynamiques sous Excel via des tableaux croisés dynamiques (TCD) et des graphiques interactifs.</li></ul><h6>Stack</h6><p><span class="badge bg-warning text-dark me-1">SQL</span><span class="badge bg-secondary me-1">Excel (TCD)</span><span class="badge bg-secondary me-1">SGBD Relationnel</span><span class="badge bg-secondary">Analyse Business</span></p></div></div></div></div>
+    
+    <div class="modal fade" id="modalPythonAPI" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Digitalisation des commerces parisiens — Webscraping & API</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="sae-badge"><strong>Projet BCOM2023</strong> — Géocodage et Enrichissement de Base de Données</span>
+                    
+                    <p>L'APUR documente les évolutions urbaines et sociétales de la métropole. Dans le cadre de l'étude de la base de données des commerces parisiens (BCOM2023), l'objectif était d'analyser la digitalisation post-Covid en récupérant automatiquement les coordonnées géographiques (GPS), les sites web et les options de livraison (UberEats, Deliveroo, etc.).</p>
+                    
+                    <div class="etl-interactive-container mt-5">
+                        <h6 class="text-center mb-4" style="font-size: 1.2rem; color: var(--primary);"><i class="fas fa-mouse-pointer"></i> Démonstration Interactive de l'API</h6>
+                        
+                        <ul class="nav nav-pills justify-content-center mb-3" id="api-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="api-raw-tab" data-bs-toggle="pill" data-bs-target="#api-raw-data" type="button" role="tab">1. Source APUR</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="api-code-tab" data-bs-toggle="pill" data-bs-target="#api-python-code" type="button" role="tab">2. Code API Python</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="api-result-tab" data-bs-toggle="pill" data-bs-target="#api-clean-result" type="button" role="tab" disabled>3. Géocodage Final</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content p-3 border rounded" style="background: var(--bg-body); min-height: 350px;">
+                            
+                            <div class="tab-pane fade show active" id="api-raw-data" role="tabpanel">
+                                <div class="p-3 rounded" style="background: #1e1e1e; color: #ff6b6b; font-family: monospace; font-size: 0.85rem; overflow-wrap: break-word; max-height: 300px; overflow-y: auto;">
+siret,numeroVoieEtablissement,indiceRepetitionEtablissement,typeVoieEtablissement,libelleVoieEtablissement,codePostalEtablissement,libelleCommuneEtablissement
+33902967000100,5,,RUE,BOUCHARDON,75001,PARIS
+40866080300021,12,B,AV,VICTOR HUGO,75008,PARIS
+53164478100014,8,,BD,MONTMARTRE,75010,PARIS
+42476141900011,114,,AV,DES CHAMPS ELYSEES,75008,PARIS
+38342795400018,45,,RUE,DE LA CHAUSSEE D ANTIN,75009,PARIS
+55203253600013,1,,PL,DU TROCADERO,75016,PARIS
+73282932000015,10,,RUE,DE RIVOLI,75004,PARIS
+49320044800017,25,,RUE,DU FAUBOURG SAINT HONORE,75008,PARIS
+30102638100029,99,,RUE,DE RIVOLI,75001,PARIS
+54209395000012,40,,BD,HAUSSMANN,75009,PARIS
+77568588800016,1,,AV,MONTAIGNE,75008,PARIS
+32145698700011,15,,RUE,DE LA PAIX,75002,PARIS
+... [Base de données contenant 135 487 lignes] ...
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-outline-custom" onclick="document.getElementById('api-code-tab').click()">Voir le script d'enrichissement <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="api-python-code" role="tabpanel">
+                                <div class="code-block-container" style="max-height: 300px; overflow-y: auto; background: #1e1e1e; border-radius: 8px; padding: 15px;">
+<code style="color: #d4d4d4; font-family: monospace; font-size: 0.85rem; white-space: pre-wrap;"><span style="color: #c586c0;">import</span> pandas
+<span style="color: #c586c0;">import</span> requests
+<span style="color: #c586c0;">import</span> time
+
+<span style="color: #c586c0;">def</span> <span style="color: #dcdcaa;">f</span>(v, fin = <span style="color: #569cd6;">False</span>):
+    r = <span style="color: #ce9178;">""</span>
+    <span style="color: #c586c0;">if not</span>(pandas.<span style="color: #dcdcaa;">isna</span>(v)):
+        r += <span style="color: #dcdcaa;">str</span>(v)
+        <span style="color: #c586c0;">if not</span>(fin):
+            r += <span style="color: #ce9178;">"+"</span>
+    <span style="color: #c586c0;">return</span> r
+
+<span style="color: #6a9955;"># Chargement de la base sans coordonnées</span>
+sirene = pandas.<span style="color: #dcdcaa;">read_csv</span>(<span style="color: #ce9178;">"StockEtablissement_utf8.csv"</span>, nrows = <span style="color: #b5cea8;">20</span>)
+sirene[<span style="color: #ce9178;">"lat"</span>] = <span style="color: #b5cea8;">0.0</span>
+sirene[<span style="color: #ce9178;">"lng"</span>] = <span style="color: #b5cea8;">0.0</span>
+
+url = <span style="color: #ce9178;">"https://api-adresse.data.gouv.fr/search/"</span>
+
+<span style="color: #c586c0;">for</span> i <span style="color: #c586c0;">in</span> <span style="color: #dcdcaa;">range</span>(sirene.shape[<span style="color: #b5cea8;">0</span>]):
+    a = sirene.loc[i,:]
+    
+    <span style="color: #6a9955;"># L'API ne fonctionne pas avec le SIRET, on reconstruit l'adresse en texte complet</span>
+    adresse = <span style="color: #dcdcaa;">f</span>(a[<span style="color: #ce9178;">"numeroVoieEtablissement"</span>]) + <span style="color: #dcdcaa;">f</span>(a[<span style="color: #ce9178;">"indiceRepetitionEtablissement"</span>]) + \
+        <span style="color: #dcdcaa;">f</span>(a[<span style="color: #ce9178;">"typeVoieEtablissement"</span>]) + <span style="color: #dcdcaa;">f</span>(a[<span style="color: #ce9178;">"libelleVoieEtablissement"</span>]) + \
+        <span style="color: #dcdcaa;">f</span>(a[<span style="color: #ce9178;">"codePostalEtablissement"</span>]) + <span style="color: #dcdcaa;">f</span>(a[<span style="color: #ce9178;">"libelleCommuneEtablissement"</span>], <span style="color: #569cd6;">True</span>)
+    
+    recherche = url + <span style="color: #ce9178;">"?q="</span> + adresse
+    reponse = requests.<span style="color: #dcdcaa;">get</span>(recherche)
+    data = reponse.<span style="color: #dcdcaa;">json</span>()
+    
+    <span style="color: #6a9955;"># Si l'API trouve l'adresse, on extrait les coordonnées GPS</span>
+    <span style="color: #c586c0;">if</span> <span style="color: #dcdcaa;">len</span>(data[<span style="color: #ce9178;">"features"</span>]) > <span style="color: #b5cea8;">0</span>:
+        coord = data[<span style="color: #ce9178;">"features"</span>][<span style="color: #b5cea8;">0</span>][<span style="color: #ce9178;">"geometry"</span>][<span style="color: #ce9178;">"coordinates"</span>]
+        sirene.loc[i,<span style="color: #ce9178;">"lng"</span>] = coord[<span style="color: #b5cea8;">0</span>]
+        sirene.loc[i,<span style="color: #ce9178;">"lat"</span>] = coord[<span style="color: #b5cea8;">1</span>]
+        
+    <span style="color: #6a9955;"># Temporisation pour ne pas surcharger les serveurs de data.gouv</span>
+    time.<span style="color: #dcdcaa;">sleep</span>(<span style="color: #b5cea8;">0.1</span>)</code>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-primary-custom" id="btn-run-api" onclick="runAPISimulation()">Exécuter la requête API <i class="fas fa-play ms-2"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="api-clean-result" role="tabpanel">
+                                <div id="api-loader" style="display: none; text-align: center; padding: 40px 0;">
+                                    <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;"></div>
+                                    <p style="font-family: monospace; color: var(--text-muted);">Fetching from api-adresse.data.gouv.fr...<br>Geocoding addresses...<br>Merging with APUR database...</p>
+                                </div>
+
+                                <div id="api-table" style="display: none;">
+                                    <div class="table-responsive" style="max-height: 200px; overflow-y: auto;">
+                                        <table class="table table-sm table-bordered table-striped" style="font-size: 0.8rem; background: var(--bg-card); color: var(--text-main);">
+                                            <thead class="table-dark" style="position: sticky; top: 0;">
+                                                <tr>
+                                                    <th>SIRET</th>
+                                                    <th>Adresse Reconstituée</th>
+                                                    <th>Code Postal</th>
+                                                    <th style="color:#2ecc71;">Longitude (API)</th>
+                                                    <th style="color:#2ecc71;">Latitude (API)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>33902967000100</td><td>5 RUE BOUCHARDON</td><td>75001</td><td><strong>2.358741</strong></td><td><strong>48.870125</strong></td></tr>
+                                                <tr><td>40866080300021</td><td>12 B AV VICTOR HUGO</td><td>75008</td><td><strong>2.293410</strong></td><td><strong>48.873210</strong></td></tr>
+                                                <tr><td>53164478100014</td><td>8 BD MONTMARTRE</td><td>75010</td><td><strong>2.341850</strong></td><td><strong>48.871890</strong></td></tr>
+                                                <tr><td>42476141900011</td><td>114 AV DES CHAMPS ELYSEES</td><td>75008</td><td><strong>2.302325</strong></td><td><strong>48.871580</strong></td></tr>
+                                                <tr><td>38342795400018</td><td>45 RUE DE LA CHAUSSEE D ANTIN</td><td>75009</td><td><strong>2.331298</strong></td><td><strong>48.874102</strong></td></tr>
+                                                <tr><td>55203253600013</td><td>1 PL DU TROCADERO</td><td>75016</td><td><strong>2.287239</strong></td><td><strong>48.863110</strong></td></tr>
+                                                <tr><td>73282932000015</td><td>10 RUE DE RIVOLI</td><td>75004</td><td><strong>2.357124</strong></td><td><strong>48.855420</strong></td></tr>
+                                                <tr><td>49320044800017</td><td>25 RUE DU FAUBOURG SAINT HONORE</td><td>75008</td><td><strong>2.319854</strong></td><td><strong>48.868740</strong></td></tr>
+                                                <tr><td>30102638100029</td><td>99 RUE DE RIVOLI</td><td>75001</td><td><strong>2.333145</strong></td><td><strong>48.862310</strong></td></tr>
+                                                <tr><td>54209395000012</td><td>40 BD HAUSSMANN</td><td>75009</td><td><strong>2.332158</strong></td><td><strong>48.872890</strong></td></tr>
+                                                <tr><td>77568588800016</td><td>1 AV MONTAIGNE</td><td>75008</td><td><strong>2.300214</strong></td><td><strong>48.865420</strong></td></tr>
+                                                <tr><td>32145698700011</td><td>15 RUE DE LA PAIX</td><td>75002</td><td><strong>2.331110</strong></td><td><strong>48.869010</strong></td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPythonCleaning" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Script ETL Python — Nettoyage de données texte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="sae-badge"><strong>Projet Data Engineering</strong> — Automatisation du traitement & Parsing</span>
+                    
+                    <p>Ce projet technique consistait à traiter un fichier texte complexe contenant des données brutes difficilement exploitables. L’objectif était de rendre ces données lisibles, formatées, et de calculer des statistiques automatiques.</p>
+                    
+                    <div class="etl-interactive-container mt-5">
+                        <h6 class="text-center mb-4" style="font-size: 1.2rem; color: var(--primary);"><i class="fas fa-mouse-pointer"></i> Démonstration Interactive du Pipeline ETL</h6>
+                        
+                        <ul class="nav nav-pills justify-content-center mb-3" id="clean-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="clean-raw-tab" data-bs-toggle="pill" data-bs-target="#clean-raw-data" type="button" role="tab">1. Fichier Brut (.txt)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="clean-code-tab" data-bs-toggle="pill" data-bs-target="#clean-python-code" type="button" role="tab">2. Code Python</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="clean-snippet-tab" data-bs-toggle="pill" data-bs-target="#clean-snippet-code" type="button" role="tab">3. Script de Transformation</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="clean-result-tab" data-bs-toggle="pill" data-bs-target="#clean-result-content" type="button" role="tab" disabled>4. Résultat (.csv)</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content p-3 border rounded" style="background: var(--bg-body); min-height: 350px;">
+                            
+                            <div class="tab-pane fade show active" id="clean-raw-data" role="tabpanel">
+                                <div class="p-3 rounded" style="background: #1e1e1e; color: #ff6b6b; font-family: monospace; font-size: 0.85rem; overflow-wrap: break-word; max-height: 300px; overflow-y: auto;">
+&title=scReAM of the BansheE   ,duration=90.0,nbvotes=2186,restriction=r,score=3.8,year=2011.0,desc=    An archeology professor unearths a dangerous artifact, unwittingly releasing a creature that is able to kill with the power of its bone-splitting scream.&&title=les innocents aux mains sales,duration=125.0,nbvotes=1751,restriction=touS pUbliCS ,score=7.0,year=1975.0,desc=Saint Tropez, 1975. Julie Wormser and her lover, writer and neighbour Jeff Marle, plan the assassination of her wealthy husband Louis, an impotent who drinks a lot. She hits him, and leaves...&&title=     le MonDE de neMo,duration=100.0,nbvotes=933448,restriction=   tous publics,score=8.1,year=2003.0,desc=  After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.    &&title=jurassic attack,duration=83.0,nbvotes=1162,restriction=R,score=2.3,year=2013.0,desc=    A group of soldiers attempting to rescue a hostage from a terrorist crash land into unfamiliar jungles which are inhabited by a group of long hidden dinosaurs.&&title=la reine margot    ,duration=106.0,nbvotes=187,restriction=,score=6.2,year=1954.0,desc= Two riders ride to Paris carrying a message for their respective lords. One is a faithful servant of Henry of Navarre, the other of the Duke of Guise.&&title=le gars des vents froids,duration=96.0,nbvotes=465,restriction=,score=6.5,year=1960.0,desc=Takeo is a young yakuza who renounces his former criminal activities after being released from prison. But sometimes escaping the past is not so easy.&&title=     zWErbowana milosC     ,duration=86.0,nbvotes=158,restriction=,score=6.3,year=2010.0,desc=   Add a Plot&&title=a vision of murder: the story of donielle   ,duration=100.0,nbvotes=160,restriction=,score=4.8,year=2000.0,desc=    When Donielle is just eight years old and attending her best friends funeral she has a vision that her friend was murdered by his father. No one believes her and she is disowned by her ...&&title= prep school,duration=85.0,nbvotes=222,restriction=,score=5.9,year=2015.0,desc=When the star player of an elite prep school rugby team suffers an emotional collapse, his friends and teammates respond in their own ways, ranging from heroic to horrifying.&&title=ghost killers vs. bloody mary,duration=108.0,nbvotes=1140,restriction=,score=5.5,year=2018.0,desc=Four YouTubers with expertise in supernatural events are seeking recognition from the audience whilst solving the urban legend of the Bathroom Blonde Case. The spirit that haunts the schools bathroom in Brazil.&&title= trailer paRk shark  ,duration=85.0,nbvotes=1143,restriction=,score=4.4,year=2017.0,desc=   A tropical storm floods Soggy Meadows trailer park and forces a hungry shark upriver.&&title=a swingers weekend ,duration=90.0,nbvotes=201,restriction=,score=5.6,year=2017.0,desc=Seemingly perfect couple Lisa and Dan plan a steamy swingers weekend. However things go wrong when a third couple drops in unexpectedly.
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-outline-custom" onclick="document.getElementById('clean-code-tab').click()">Voir le script de nettoyage <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="clean-python-code" role="tabpanel">
+                                <div class="code-block-container" style="max-height: 300px; overflow-y: auto; background: #1e1e1e; border-radius: 8px; padding: 15px;">
+<code style="color: #d4d4d4; font-family: monospace; font-size: 0.85rem; white-space: pre-wrap;"><span style="color: #9cdcfe;">NomFichier</span> = <span style="color: #ce9178;">"groupe-11D_data.txt"</span>
+<span style="color: #9cdcfe;">Path</span> = <span style="color: #ce9178;">"../Data/"</span> + NomFichier <span style="color: #6a9955;">#Path est la variable qui stock le chemin du fichier data</span>
+<span style="color: #9cdcfe;">f</span> = <span style="color: #dcdcaa;">open</span>(Path, mode=<span style="color: #ce9178;">"r"</span>, encoding=<span style="color: #ce9178;">"utf-8"</span>) <span style="color: #6a9955;">#Le programme commence par ouvrir un fichier texte data_groupe_11D.txt en mode lecture.</span>
+<span style="color: #9cdcfe;">t</span> = f.<span style="color: #dcdcaa;">read</span>()
+<span style="color: #9cdcfe;">t</span> = t.<span style="color: #dcdcaa;">split</span>(<span style="color: #ce9178;">"&&"</span>)
+f.<span style="color: #dcdcaa;">close</span>()
+
+<span style="color: #9cdcfe;">Num</span> = <span style="color: #b5cea8;">1</span>
+<span style="color: #9cdcfe;">lignet</span> = <span style="color: #ce9178;">""</span>
+<span style="color: #9cdcfe;">fs2</span> = [<span style="color: #b5cea8;">0</span>] * <span style="color: #dcdcaa;">len</span>(t)
+
+<span style="color: #c586c0;">for</span> i <span style="color: #c586c0;">in</span> <span style="color: #dcdcaa;">range</span>(<span style="color: #dcdcaa;">len</span>(t)):
+    p = t[i]
+    R, _, desc = t[i].<span style="color: #dcdcaa;">partition</span>(<span style="color: #ce9178;">",desc="</span>) <span style="color: #6a9955;">#ici on commence par la fin car R stock ce qui est a gauche de ",desc="</span>
+    desc = desc.<span style="color: #dcdcaa;">strip</span>().<span style="color: #dcdcaa;">capitalize</span>().<span style="color: #dcdcaa;">replace</span>(<span style="color: #ce9178;">"&"</span>, <span style="color: #ce9178;">" "</span>) + <span style="color: #ce9178;">";"</span> <span style="color: #6a9955;">#On corrige ensuite le format du texte</span>
+    
+    R, _, year = R.<span style="color: #dcdcaa;">partition</span>(<span style="color: #ce9178;">",year="</span>) <span style="color: #6a9955;">#et on refait la même chose pour</span>
+    year = <span style="color: #dcdcaa;">str</span>(<span style="color: #dcdcaa;">int</span>(<span style="color: #dcdcaa;">float</span>(year))) + <span style="color: #ce9178;">";"</span>
+    
+    R, _, score = R.<span style="color: #dcdcaa;">partition</span>(<span style="color: #ce9178;">",score="</span>)
+    fs2[i] = <span style="color: #dcdcaa;">float</span>(score)
+    score = <span style="color: #dcdcaa;">str</span>(<span style="color: #dcdcaa;">float</span>(score)) + <span style="color: #ce9178;">";"</span>
+    
+    R, _, restriction = R.<span style="color: #dcdcaa;">partition</span>(<span style="color: #ce9178;">",restriction="</span>)
+    restriction = restriction.<span style="color: #dcdcaa;">strip</span>().<span style="color: #dcdcaa;">title</span>() + <span style="color: #ce9178;">";"</span>
+    
+    R, _, nbvotes = R.<span style="color: #dcdcaa;">partition</span>(<span style="color: #ce9178;">",nbvotes="</span>)
+    nbvotes = <span style="color: #dcdcaa;">str</span>(<span style="color: #dcdcaa;">int</span>(<span style="color: #dcdcaa;">float</span>(nbvotes))) + <span style="color: #ce9178;">";"</span>
+    
+    R, _, dura = R.<span style="color: #dcdcaa;">partition</span>(<span style="color: #ce9178;">",duration="</span>)
+    dura = dura.<span style="color: #dcdcaa;">replace</span>(<span style="color: #ce9178;">"."</span>, <span style="color: #ce9178;">","</span>) + <span style="color: #ce9178;">";"</span>
+    
+    R, _, titre = R.<span style="color: #dcdcaa;">partition</span>(<span style="color: #ce9178;">"title="</span>)
+    titre = titre.<span style="color: #dcdcaa;">title</span>().<span style="color: #dcdcaa;">strip</span>() + <span style="color: #ce9178;">";"</span>
+    
+    Ref = <span style="color: #ce9178;">"F-11D"</span> + <span style="color: #dcdcaa;">str</span>(Num) + <span style="color: #ce9178;">"-"</span> + year
+    lignet += Ref + titre + year + dura + nbvotes + score + restriction + desc + <span style="color: #ce9178;">"\n"</span> <span style="color: #6a9955;">#on stock tout dans une variable lignet</span>
+    Num += <span style="color: #b5cea8;">1</span>
+
+<span style="color: #9cdcfe;">N</span> = <span style="color: #dcdcaa;">open</span>(<span style="color: #ce9178;">"../res/groupe-11D_data.csv"</span>, mode=<span style="color: #ce9178;">"w"</span>, encoding=<span style="color: #ce9178;">"cp1252"</span>) <span style="color: #6a9955;">#on ouvre un tableau csv en mode ecriture</span>
+<span style="color: #9cdcfe;">pligne</span> = <span style="color: #ce9178;">"Réference;Titre;Année;Durée;NombreDeVote;Score;Restriction;Description\n"</span>
+N.<span style="color: #dcdcaa;">write</span>(pligne)
+N.<span style="color: #dcdcaa;">write</span>(lignet)
+N.<span style="color: #dcdcaa;">close</span>()
+
+<span style="color: #9cdcfe;">N</span> = <span style="color: #dcdcaa;">open</span>(<span style="color: #ce9178;">"../res/groupe-11A_info.txt"</span>, mode=<span style="color: #ce9178;">"w"</span>, encoding=<span style="color: #ce9178;">"utf-8"</span>) <span style="color: #6a9955;">#on ouvre un fichier texte en mode ecriture</span>
+<span style="color: #9cdcfe;">maximum</span> = <span style="color: #dcdcaa;">str</span>(<span style="color: #dcdcaa;">max</span>(fs2)) + <span style="color: #ce9178;">"\n"</span> <span style="color: #6a9955;">#calcule du maximum</span>
+<span style="color: #9cdcfe;">minimum</span> = <span style="color: #dcdcaa;">str</span>(<span style="color: #dcdcaa;">min</span>(fs2)) + <span style="color: #ce9178;">"\n"</span> <span style="color: #6a9955;">#calcule du minimum</span>
+<span style="color: #9cdcfe;">nbfilm</span> = <span style="color: #dcdcaa;">str</span>(<span style="color: #dcdcaa;">len</span>(fs2)) + <span style="color: #ce9178;">"\n"</span> <span style="color: #6a9955;">#Nombre de film</span>
+<span style="color: #9cdcfe;">moyenne</span> = <span style="color: #dcdcaa;">str</span>(<span style="color: #dcdcaa;">round</span>(<span style="color: #dcdcaa;">sum</span>(fs2) / <span style="color: #dcdcaa;">len</span>(fs2), <span style="color: #b5cea8;">2</span>)) + <span style="color: #ce9178;">"\n"</span> <span style="color: #6a9955;">#calcule de la moyenne</span>
+<span style="color: #9cdcfe;">te</span> = <span style="color: #ce9178;">"Nom du fichier : "</span> + NomFichier + <span style="color: #ce9178;">"\n"</span> + <span style="color: #ce9178;">"Nombre de films : "</span> + nbfilm + <span style="color: #ce9178;">"Score minimum : "</span> + minimum + <span style="color: #ce9178;">"Score maximum : "</span> + maximum + <span style="color: #ce9178;">"Score moyen : "</span> + moyenne
+N.<span style="color: #dcdcaa;">write</span>(te)
+N.<span style="color: #dcdcaa;">close</span>()</code>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-primary-custom" id="btn-run-cleaning" onclick="runCleaningSimulation()">Exécuter le script ETL <i class="fas fa-play ms-2"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="clean-snippet-code" role="tabpanel">
+                                <div class="code-block-container" style="max-height: 300px; overflow-y: auto; background: #1e1e1e; border-radius: 8px; padding: 15px;">
+                                    <button class="btn btn-sm btn-outline-light mb-3" onclick="copyCodeSnippet()">Copier le Snippet <i class="fas fa-copy"></i></button>
+                                    <pre><code class="language-python">NomFichier = "groupe-11D_data.txt"
+Path = "../Data/" + NomFichier
+f = open(Path, mode="r", encoding="utf-8")
+t = f.read()
+t = t.split("&&")
+f.close()
+
+Num = 1
+lignet = ""
+fs2 = [0] * len(t)
+
+for i in range(len(t)):
+    p = t[i]
+    R, _, desc = t[i].partition(",desc=")
+    desc = desc.strip().capitalize().replace("&", " ") + ";"
+    
+    R, _, year = R.partition(",year=")
+    year = str(int(float(year))) + ";"
+    
+    R, _, score = R.partition(",score=")
+    score = str(float(score)) + ";"
+    
+    R, _, restriction = R.partition(",restriction=")
+    restriction = restriction.strip().lower().replace(" ", "").replace("touspublics", "tous publics") + ";"
+    
+    R, _, nbvotes = R.partition(",nbvotes=")
+    nbvotes = str(int(float(nbvotes))) + ";"
+    
+    R, _, duration = R.partition(",duration=")
+    dura = str(int(float(duration))) + ";"
+    
+    R, _, titre = R.partition("title=")
+    titre = titre.strip().capitalize() + ";"
+    
+    Ref = str(Num) + ";"
+    lignet += Ref + titre + year + dura + nbvotes + score + restriction + desc + "\n"
+    Num += 1
+
+N = open("../res/groupe-11D_data.csv", mode="w", encoding="cp1252")
+pligne = "Réference;Titre;Année;Durée;NombreDeVote;Score;Restriction;Description\n"
+N.write(pligne)
+N.write(lignet)
+N.close()
+
+N = open("../res/groupe-11A_info.txt", mode="w", encoding="utf-8")
+maximum = str(max(fs2)) + "\n"
+minimum = str(min(fs2)) + "\n"
+nbfilm = str(len(fs2)) + "\n"
+moyenne = str(round(sum(fs2) / len(fs2), 2)) + "\n"
+te = "Nom du fichier : " + NomFichier + "\n" + "Nombre de films : " + nbfilm + "Score minimum : " + minimum + "Score maximum : " + maximum + "Score moyen : " + moyenne
+N.write(te)
+N.close()</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="clean-result-content" role="tabpanel">
+                                <div id="clean-loader" style="display: none; text-align: center; padding: 40px 0;">
+                                    <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;"></div>
+                                    <p style="font-family: monospace; color: var(--text-muted);">Processing groupe-11D_data.txt...<br>Parsing delimiters...<br>Exporting to CSV...</p>
+                                </div>
+
+                                <div id="clean-table" style="display: none;">
+                                    <div class="table-responsive" style="max-height: 200px; overflow-y: auto;">
+                                        <table class="table table-sm table-bordered table-striped" style="font-size: 0.8rem; background: var(--bg-card); color: var(--text-main);">
+                                            <thead class="table-dark" style="position: sticky; top: 0;">
+                                                <tr>
+                                                    <th>Référence</th>
+                                                    <th>Titre</th>
+                                                    <th>Année</th>
+                                                    <th>Durée</th>
+                                                    <th>Votes</th>
+                                                    <th>Score</th>
+                                                    <th>Restriction</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>F-11D1-2011</td><td>Scream Of The Banshee</td><td>2011</td><td>90,0</td><td>2186</td><td>3.8</td><td>R</td></tr>
+                                                <tr><td>F-11D2-1975</td><td>Les Innocents Aux Mains Sales</td><td>1975</td><td>125,0</td><td>1751</td><td>7.0</td><td>Tous Publics</td></tr>
+                                                <tr><td>F-11D3-2003</td><td>Le Monde De Nemo</td><td>2003</td><td>100,0</td><td>933448</td><td>8.1</td><td>Tous Publics</td></tr>
+                                                <tr><td>F-11D4-2013</td><td>Jurassic Attack</td><td>2013</td><td>83,0</td><td>1162</td><td>2.3</td><td>R</td></tr>
+                                                <tr><td>F-11D5-1954</td><td>La Reine Margot</td><td>1954</td><td>106,0</td><td>187</td><td>6.2</td><td></td></tr>
+                                                <tr><td>F-11D6-1960</td><td>Le Gars Des Vents Froids</td><td>1960</td><td>96,0</td><td>465</td><td>6.5</td><td></td></tr>
+                                                <tr><td>F-11D7-2010</td><td>Zwerbowana Milosc</td><td>2010</td><td>86,0</td><td>158</td><td>6.3</td><td></td></tr>
+                                                <tr><td>F-11D8-2000</td><td>A Vision Of Murder: The Story Of Donielle</td><td>2000</td><td>100,0</td><td>160</td><td>4.8</td><td></td></tr>
+                                                <tr><td>F-11D9-2015</td><td>Prep School</td><td>2015</td><td>85,0</td><td>222</td><td>5.9</td><td></td></tr>
+                                                <tr><td>F-11D10-2018</td><td>Ghost Killers Vs. Bloody Mary</td><td>2018</td><td>108,0</td><td>1140</td><td>5.5</td><td></td></tr>
+                                                <tr><td>F-11D11-2017</td><td>Trailer Park Shark</td><td>2017</td><td>85,0</td><td>1143</td><td>4.4</td><td></td></tr>
+                                                <tr><td>F-11D12-2017</td><td>A Swingers Weekend</td><td>2017</td><td>90,0</td><td>201</td><td>5.6</td><td></td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="mt-3 p-2 rounded" style="background: rgba(52,152,219,0.1); border-left: 4px solid var(--primary); font-size: 0.85rem;">
+                                        <strong><i class="fas fa-file-alt"></i> groupe-11A_info.txt généré avec succès :</strong><br>
+                                        Nom du fichier : groupe-11D_data.txt | Nombre de films : 76 | Score minimum : 1.5 | Score maximum : 9.4 | Score moyen : 6.12
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDataViz" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Système de Reporting — SAS, Excel & Power BI</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>Projet Collaboratif</strong> — Traitement & DataViz</span><h6>Contexte professionnel</h6><p>Dans ce projet réalisé en groupe, l’objectif était de produire un système de reporting complet à partir de données issues de plusieurs sources, en gérant l’ensemble du processus, du traitement backend à la visualisation.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Programmation de traitements sous SAS afin de préparer, nettoyer et transformer les données hétérogènes.</li><li><i class="fas fa-check"></i> Utilisation d'Excel pour structurer les analyses intermédiaires et créer des tableaux de bord avec des indicateurs clés.</li><li><i class="fas fa-check"></i> Conception de visualisations interactives avec Power BI pour explorer les données et suivre les performances de manière dynamique.</li><li><i class="fas fa-check"></i> Travail en équipe pour synchroniser les traitements techniques et livrer un produit professionnel cohérent.</li></ul><h6>Stack</h6><p><span class="badge bg-warning text-dark me-1">Power BI</span><span class="badge bg-secondary me-1">SAS</span><span class="badge bg-secondary me-1">Excel</span><span class="badge bg-secondary">Reporting Multi-sources</span></p></div></div></div></div>
+    <div class="modal fade" id="modalHappiness" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">World Happiness Report — Analyse des données mondiales de bonheur</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>SAÉ2.06</strong> — Analyse de données, reporting et datavisualisation</span><h6>Contexte professionnel</h6><p>Projet d'intégration mobilisant les 3 compétences du semestre. À partir du World Happiness Report (open data mondial), mener une étude statistique complète avec reporting automatisé et datavisualisation — pipeline du traitement à la restitution.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Importation et Data Cleaning sous R (valeurs manquantes, typage des variables, standardisation).</li><li><i class="fas fa-check"></i> Analyse exploratoire univariée et bivariée : distributions, indicateurs de position et dispersion.</li><li><i class="fas fa-check"></i> Étude des corrélations entre score de bonheur et variables explicatives (PIB/hab., liberté, gouvernance).</li><li><i class="fas fa-check"></i> Production de visualisations avancées avec ggplot2 : scatter plots annotés, heatmaps de corrélations.</li></ul><h6>Stack</h6><p><span class="badge bg-primary me-1">R</span><span class="badge bg-secondary me-1">ggplot2</span><span class="badge bg-secondary me-1">R Markdown</span></p></div></div></div></div>
+
+    <div class="modal fade" id="modalEnquete" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Enquête Pôle Culture — Sondage & Analyse</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>Projet Académique</strong> — Mise en œuvre d'une enquête complète</span><h6>Contexte professionnel</h6><p>J’ai participé à la réalisation complète d’une enquête visant à analyser l’intérêt des étudiants pour les activités culturelles proposées par l’université, de la conception du questionnaire à l'analyse des retours.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Conception du questionnaire via LimeSurvey (questions claires et exploitables) et diffusion stratégique (en ligne et sur le campus) pour obtenir un échantillon représentatif.</li><li><i class="fas fa-check"></i> Nettoyage des données collectées sous Excel : correction des incohérences, gestion des valeurs manquantes et structuration de la base.</li><li><i class="fas fa-check"></i> Analyse statistique descriptive : calcul d'indicateurs et production de visualisations (diagrammes, histogrammes).</li><li><i class="fas fa-check"></i> Rédaction d’un rapport synthétique où les résultats ont été interprétés pour un public non technique.</li></ul><h6>Stack</h6><p><span class="badge bg-warning text-dark me-1">LimeSurvey</span><span class="badge bg-secondary me-1">Excel</span><span class="badge bg-secondary">Statistique descriptive</span><span class="badge bg-secondary">Méthodologie</span></p></div></div></div></div>
+
+    <div class="modal fade" id="modalRGPD" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Conformité RGPD</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>SAÉ 3.VCOD.04</strong> — Conformité réglementaire</span><h6>Contexte professionnel</h6><p>Analyse de la conformité RGPD d'une organisation : identification des données personnelles traitées, cartographie des flux, évaluation des risques et recommandations de mise en conformité.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Audit des données personnelles collectées et traitées.</li><li><i class="fas fa-check"></i> Cartographie des flux de données et identification des responsables.</li><li><i class="fas fa-check"></i> Évaluation des risques et rédaction d'un rapport de conformité.</li><li><i class="fas fa-check"></i> Propositions de mesures correctives et plan de mise en conformité.</li></ul><h6>Stack</h6><p><span class="badge bg-secondary me-1">RGPD</span><span class="badge bg-secondary me-1">Réglementation</span><span class="badge bg-secondary">Analyse de risques</span></p></div></div></div></div>
+
+    <div class="modal fade" id="modalStatTests" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tests Statistiques — Cardio Good Fitness</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="sae-badge"><strong>Rapport d'étude</strong> — Analyse des profils clients, IUT Paris Rives de Seine</span>
+                    <p>Étude statistique portant sur <strong>180 clients</strong> de l'entreprise Cardio Good Fitness, ayant acheté l'un des trois modèles de tapis de course : TM195, TM498 ou TM798. Objectif : identifier les différences de profils selon le genre et le modèle acheté.</p>
+
+                    <div class="etl-interactive-container mt-4">
+                        <h6 class="text-center mb-3" style="font-size:1.1rem; color:var(--primary);"><i class="fas fa-code"></i> Analyse statistique — Code R</h6>
+                        <ul class="nav nav-pills justify-content-center mb-3" id="stat-tabs" role="tablist">
+                            <li class="nav-item" role="presentation"><button class="nav-link active" id="stat-data-tab" data-bs-toggle="pill" data-bs-target="#stat-data" type="button" role="tab">1. Données</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="stat-chi2-tab" data-bs-toggle="pill" data-bs-target="#stat-chi2" type="button" role="tab">2. Test Chi² Genre × Produit</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="stat-ttest-tab" data-bs-toggle="pill" data-bs-target="#stat-ttest" type="button" role="tab">3. Tests de Student</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="stat-results-tab" data-bs-toggle="pill" data-bs-target="#stat-results" type="button" role="tab">4. Résultats</button></li>
+                        </ul>
+                        <div class="tab-content p-3 border rounded" style="background:var(--bg-body); min-height:320px;">
+                            <div class="tab-pane fade show active" id="stat-data" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Préparation du jeu de données : factorisation des variables, recodage du niveau d'éducation en tranches et catégorisation de l'usage.</p>
+                                <div style="max-height:260px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#c586c0;">library</span>(tidyverse); <span style="color:#c586c0;">library</span>(GGally); <span style="color:#c586c0;">library</span>(corrplot)
+
+don &lt;- read.csv(<span style="color:#ce9178;">"CardioGoodFitness.csv"</span>, header=TRUE, sep=<span style="color:#ce9178;">","</span>)
+
+don &lt;- don %&gt;% mutate(
+  Product       = factor(Product),
+  Gender        = factor(Gender),
+  MaritalStatus = factor(MaritalStatus),
+  Fitness       = factor(Fitness),
+  Niv = cut(Education, breaks=c(11,14,16,21),
+            labels=c(<span style="color:#ce9178;">"12-14"</span>, <span style="color:#ce9178;">"14-16"</span>, <span style="color:#ce9178;">"&gt;16"</span>)),
+  Usage_cat = case_when(
+    Usage &lt;= 3            ~ <span style="color:#ce9178;">"Faible"</span>,
+    Usage &gt; 3 &amp; Usage &lt;= 5 ~ <span style="color:#ce9178;">"Modere"</span>,
+    Usage &gt; 5             ~ <span style="color:#ce9178;">"Eleve"</span>
+  ) %&gt;% factor(levels=c(<span style="color:#ce9178;">"Faible"</span>, <span style="color:#ce9178;">"Modere"</span>, <span style="color:#ce9178;">"Eleve"</span>))
+)</code></div>
+                                <div class="mt-3 p-2 rounded" style="background:rgba(52,152,219,0.1); border-left:4px solid var(--primary); font-size:0.85rem;"><i class="fas fa-info-circle"></i> <strong>Échantillon :</strong> 180 clients — 57,8 % hommes, âge moyen 28,8 ans, revenu moyen 53 720 $. Produit le plus vendu : TM195 (44,4 %), suivi de TM498 (33,3 %) et TM798 (22,2 %).</div>
+                            </div>
+                            <div class="tab-pane fade" id="stat-chi2" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Test du Chi² pour tester l'indépendance entre le genre et le modèle de tapis acheté. Effectifs théoriques tous &gt; 5.</p>
+                                <div style="max-height:220px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#6a9955;"># Test Chi² d'indépendance Genre × Produit</span>
+chisq.test(table(don$Gender, don$Product), correct=<span style="color:#569cd6;">FALSE</span>)
+<span style="color:#6a9955;"># X-squared = 12.9, df = 2, p-value = 0.0016 **</span>
+
+<span style="color:#6a9955;"># Visualisation : barplot empilé normalisé</span>
+ggplot(don) +
+  aes(x=Gender, fill=Product) +
+  geom_bar(position=<span style="color:#ce9178;">"fill"</span>) +
+  labs(title=<span style="color:#ce9178;">"Répartition des produits selon le genre"</span>,
+       x=<span style="color:#ce9178;">"Genre"</span>, y=<span style="color:#ce9178;">"fréquence"</span>, fill=<span style="color:#ce9178;">"Produit acheté"</span>) +
+  theme_minimal()</code></div>
+                                <div class="mt-3 p-2 rounded" style="background:rgba(231,76,60,0.1); border-left:4px solid #e74c3c; font-size:0.85rem;"><i class="fas fa-chart-bar"></i> <strong>Résultat Chi² :</strong> p-value = 0,0016 &lt; 0,05 → dépendance significative entre genre et produit. Le TM798 est très majoritairement acheté par des hommes (27,5 % contre 9,8 % chez les femmes).</div>
+                            </div>
+                            <div class="tab-pane fade" id="stat-ttest" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Tests de Student pour comparer les moyennes (revenu, miles) entre hommes et femmes. Corrélation de Spearman entre âge et revenu.</p>
+                                <div style="max-height:240px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#6a9955;"># Comparaison du revenu selon le genre</span>
+t.test(Income ~ Gender, data=don)
+<span style="color:#6a9955;"># t = -2.93, p-value = 0.004 ** → Hommes : 56 563 $ vs Femmes : 49 829 $</span>
+
+<span style="color:#6a9955;"># Comparaison des miles prévus selon le genre</span>
+t.test(Miles ~ Gender, data=don)
+<span style="color:#6a9955;"># t = -3.12, p-value = 0.002 ** → Hommes prévoient davantage de km</span>
+
+<span style="color:#6a9955;"># Corrélation de Spearman : âge vs revenu</span>
+cor.test(don$Age, don$Income, method=<span style="color:#ce9178;">"spearman"</span>)
+<span style="color:#6a9955;"># rho = 0.47, p-value &lt; 0.001 *** → corrélation positive modérée</span>
+
+<span style="color:#6a9955;"># Boxplot revenu / genre</span>
+ggplot(don, aes(Gender, Income, fill=Gender)) +
+  geom_boxplot() +
+  geom_hline(yintercept=mean(don[don$Gender==<span style="color:#ce9178;">"Female"</span>,]$Income), col=<span style="color:#ce9178;">"red"</span>) +
+  geom_hline(yintercept=mean(don[don$Gender==<span style="color:#ce9178;">"Male"</span>,]$Income), col=<span style="color:#ce9178;">"blue"</span>) +
+  theme_minimal()</code></div>
+                            </div>
+                            <div class="tab-pane fade" id="stat-results" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Synthèse des tests réalisés (seuil α = 5 %).</p>
+                                <div class="table-responsive"><table class="table table-sm table-bordered" style="font-size:0.85rem; background:var(--bg-card); color:var(--text-main);"><thead class="table-dark"><tr><th>Test</th><th>Variables</th><th>Statistique</th><th>p-value</th><th>Conclusion</th></tr></thead><tbody><tr><td>Chi²</td><td>Genre × Produit</td><td>X² = 12,9</td><td><strong style="color:#e74c3c;">0,0016</strong></td><td>Dépendance significative ✓</td></tr><tr><td>Student</td><td>Revenu / Genre</td><td>t = −2,93</td><td><strong style="color:#e74c3c;">0,004</strong></td><td>Hommes plus aisés (56 k$ vs 49 k$) ✓</td></tr><tr><td>Student</td><td>Miles / Genre</td><td>t = −3,12</td><td><strong style="color:#e74c3c;">0,002</strong></td><td>Hommes prévoient plus de km ✓</td></tr><tr><td>Spearman</td><td>Âge × Revenu</td><td>ρ = 0,47</td><td><strong style="color:#e74c3c;">&lt;0,001</strong></td><td>Corrélation positive modérée ✓</td></tr></tbody></table></div>
+                                <div class="mt-2 p-2 rounded" style="background:rgba(46,204,113,0.1); border-left:4px solid #2ecc71; font-size:0.85rem;"><i class="fas fa-lightbulb"></i> <strong>Insights :</strong> Le profil type du client TM798 est un homme, à revenus élevés, fort usage prévu (&gt;5j/semaine) et niveau fitness élevé. Les femmes achètent essentiellement le TM195 (entrée de gamme).</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="mt-4">Stack</h6>
+                    <p><span class="badge bg-primary me-1">R</span><span class="badge bg-secondary me-1">ggplot2</span><span class="badge bg-secondary me-1">Chi²</span><span class="badge bg-secondary me-1">Test de Student</span><span class="badge bg-secondary me-1">Spearman</span><span class="badge bg-secondary">R Markdown / PDF</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFactorielles" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Méthodes Factorielles — ACP, AFC, ACM, MDS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="sae-badge"><strong>SAÉ 4.02</strong> — Reporting d'une analyse multivariée, IUT Paris Rives de Seine</span>
+                    <p>Rapport complet d'analyse multivariée appliquant les quatre grandes méthodes de réduction de dimension : <strong>ACP</strong> (données quantitatives), <strong>AFC</strong> (tableaux de contingence), <strong>ACM</strong> (données catégorielles) et <strong>MDS</strong> (données de distances).</p>
+                    <div class="etl-interactive-container mt-4">
+                        <h6 class="text-center mb-3" style="font-size:1.1rem; color:var(--primary);"><i class="fas fa-code"></i> Méthodes &amp; Jeux de données</h6>
+                        <ul class="nav nav-pills justify-content-center mb-3" id="fact-tabs" role="tablist">
+                            <li class="nav-item" role="presentation"><button class="nav-link active" id="fact-acp-tab" data-bs-toggle="pill" data-bs-target="#fact-acp" type="button" role="tab">ACP — Corps humain</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="fact-afc-tab" data-bs-toggle="pill" data-bs-target="#fact-afc" type="button" role="tab">AFC — Prix Nobel</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="fact-acm-tab" data-bs-toggle="pill" data-bs-target="#fact-acm" type="button" role="tab">ACM — Races canines</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" id="fact-mds-tab" data-bs-toggle="pill" data-bs-target="#fact-mds" type="button" role="tab">MDS — Distances villes</button></li>
+                        </ul>
+                        <div class="tab-content p-3 border rounded" style="background:var(--bg-body); min-height:320px;">
+                            <div class="tab-pane fade show active" id="fact-acp" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">ACP sur <code>body_full.csv</code> (mesures corporelles) et <code>athle_records.csv</code> (records athlétisme par pays). Comparaison <code>prcomp()</code> vs <code>FactoMineR::PCA()</code> — impact de la normalisation.</p>
+                                <div style="max-height:240px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#c586c0;">library</span>(FactoMineR); <span style="color:#c586c0;">library</span>(factoextra)
+
+<span style="color:#6a9955;"># ACP sur données corporelles (variable qualitative genre en supplémentaire)</span>
+body &lt;- read.table(<span style="color:#ce9178;">"body_full.csv"</span>, header=TRUE, sep=<span style="color:#ce9178;">";"</span>, dec=<span style="color:#ce9178;">","</span>)
+pca &lt;- PCA(body, scale.unit=TRUE, graph=TRUE, quali.sup=25)
+
+<span style="color:#6a9955;"># Individus colorés par genre + ellipses de confiance</span>
+fviz_pca_ind(pca, geom.ind=<span style="color:#ce9178;">"point"</span>, col.ind=body$gender,
+             addEllipses=TRUE, legend.title=<span style="color:#ce9178;">"Groupe"</span>)
+
+<span style="color:#6a9955;"># Cercle des corrélations pour interpréter les axes</span>
+fviz_pca_var(pca)
+
+<span style="color:#6a9955;"># Sur records athlétisme — sans normalisation vs avec scale()</span>
+athlete &lt;- read.csv(<span style="color:#ce9178;">"athle_records.csv"</span>, sep=<span style="color:#ce9178;">"\t"</span>, header=TRUE, dec=<span style="color:#ce9178;">","</span>)
+fviz_eig(prcomp(scale(athlete[,-1])), addlabels=TRUE)</code></div>
+                                <div class="mt-3 p-2 rounded" style="background:rgba(52,152,219,0.1); border-left:4px solid var(--primary); font-size:0.85rem;"><i class="fas fa-info-circle"></i> <strong>Constat :</strong> Sans normalisation, les variables à grande amplitude (poids, taille) dominent entièrement la première composante. <code>FactoMineR::PCA()</code> normalise automatiquement contrairement à <code>prcomp()</code>.</div>
+                            </div>
+                            <div class="tab-pane fade" id="fact-afc" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">AFC sur le tableau de contingence Pays × Discipline des Prix Nobel (<code>data_CA_NobelPrize_withMaths.csv</code>).</p>
+                                <div style="max-height:240px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#c586c0;">library</span>(FactoMineR); <span style="color:#c586c0;">library</span>(factoextra)
+
+<span style="color:#6a9955;"># Chargement et préparation du tableau de contingence Nobel</span>
+nobel &lt;- read.csv(<span style="color:#ce9178;">"data_CA_NobelPrize_withMaths.csv"</span>,
+                  header=TRUE, sep=<span style="color:#ce9178;">";"</span>, row.names=1)
+
+<span style="color:#6a9955;"># AFC — analyse de correspondances</span>
+res_ca &lt;- CA(nobel, graph=FALSE)
+
+<span style="color:#6a9955;"># Visualisation : biplot lignes (pays) et colonnes (disciplines)</span>
+fviz_ca_biplot(res_ca, repel=TRUE,
+               col.row=<span style="color:#ce9178;">"steelblue"</span>, col.col=<span style="color:#ce9178;">"tomato"</span>)
+
+<span style="color:#6a9955;"># Part de variance expliquée par chaque axe factoriel</span>
+fviz_eig(res_ca, addlabels=TRUE)</code></div>
+                                <div class="mt-3 p-2 rounded" style="background:rgba(52,152,219,0.1); border-left:4px solid var(--primary); font-size:0.85rem;"><i class="fas fa-info-circle"></i> <strong>Lecture :</strong> Les pays proches d'une discipline dans le biplot y sont sur-représentés. Les États-Unis dominent l'axe 1 (toutes disciplines), tandis que la France est davantage associée à la Littérature.</div>
+                            </div>
+                            <div class="tab-pane fade" id="fact-acm" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">ACM sur <code>chiens.rda</code> — caractéristiques qualitatives de races canines (taille, poids, vitesse, intelligence…).</p>
+                                <div style="max-height:240px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#c586c0;">library</span>(FactoMineR); <span style="color:#c586c0;">library</span>(factoextra)
+
+<span style="color:#6a9955;"># Chargement des données sur les races de chiens</span>
+load(<span style="color:#ce9178;">"chiens.rda"</span>)
+
+<span style="color:#6a9955;"># ACM — Analyse des Correspondances Multiples</span>
+res_mca &lt;- MCA(chiens, graph=FALSE)
+
+<span style="color:#6a9955;"># Eboulis des valeurs propres</span>
+fviz_eig(res_mca, addlabels=TRUE)
+
+<span style="color:#6a9955;"># Nuage des individus (races) et des modalités</span>
+fviz_mca_ind(res_mca, repel=TRUE)
+fviz_mca_var(res_mca, repel=TRUE,
+             ggtheme=theme_minimal())</code></div>
+                                <div class="mt-3 p-2 rounded" style="background:rgba(52,152,219,0.1); border-left:4px solid var(--primary); font-size:0.85rem;"><i class="fas fa-info-circle"></i> <strong>Résultat :</strong> L'ACM révèle que la première dimension oppose les races de grande taille / forte utilité aux petites races d'agrément. La seconde dimension est liée à la vélocité et l'intelligence.</div>
+                            </div>
+                            <div class="tab-pane fade" id="fact-mds" role="tabpanel">
+                                <p style="font-size:0.9rem; color:var(--text-muted);">MDS sur une matrice de distances inter-villes françaises et sur <code>birthwt.csv</code> (données médicales) pour reconstituer une carte à partir des distances.</p>
+                                <div style="max-height:240px; overflow-y:auto; background:#1e1e1e; border-radius:8px; padding:15px;"><code style="color:#d4d4d4; font-family:monospace; font-size:0.83rem; white-space:pre-wrap;"><span style="color:#6a9955;"># Matrice de distances inter-villes</span>
+villes &lt;- read.csv(<span style="color:#ce9178;">"Distances_Inter_Villes_Matrice.csv"</span>,
+                   header=TRUE, sep=<span style="color:#ce9178;">";"</span>, row.names=1)
+dist_mat &lt;- as.dist(villes)
+
+<span style="color:#6a9955;"># MDS classique (métrique)</span>
+mds_res &lt;- cmdscale(dist_mat, k=2, eig=TRUE)
+coords &lt;- as.data.frame(mds_res$points)
+
+<span style="color:#6a9955;"># Reconstitution de la carte des villes</span>
+ggplot(coords, aes(x=V1, y=V2, label=rownames(coords))) +
+  geom_point(color=<span style="color:#ce9178;">"steelblue"</span>, size=3) +
+  geom_text(vjust=-0.8, size=3) +
+  labs(title=<span style="color:#ce9178;">"Carte reconstituée par MDS"</span>) +
+  theme_minimal()</code></div>
+                                <div class="mt-3 p-2 rounded" style="background:rgba(46,204,113,0.1); border-left:4px solid #2ecc71; font-size:0.85rem;"><i class="fas fa-map-marker-alt"></i> <strong>Résultat :</strong> La carte reconstituée par MDS à partir des seules distances routières correspond fidèlement à la géographie réelle des villes françaises, validant la qualité de la représentation (stress faible).</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="mt-4">Stack</h6>
+                    <p><span class="badge bg-primary me-1">R</span><span class="badge bg-secondary me-1">FactoMineR</span><span class="badge bg-secondary me-1">factoextra</span><span class="badge bg-secondary me-1">ggplot2</span><span class="badge bg-secondary">R Markdown</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAmazon" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Tableau de bord R Shiny – Amazon Sales</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>SAÉ 4.VCOD.01</strong> — Composant décisionnel</span><h6>Contexte professionnel</h6><p>Développement d'une application décisionnelle interactive avec R Shiny pour analyser les données de ventes Amazon : tableaux de bord dynamiques, filtres interactifs et visualisations avancées.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Conception de l'architecture de l'application Shiny.</li><li><i class="fas fa-check"></i> Développement de l'interface utilisateur avec shinydashboard.</li><li><i class="fas fa-check"></i> Création de visualisations interactives (DT, plotly, ggplot2).</li><li><i class="fas fa-check"></i> Déploiement et tests de l'application.</li></ul><h6>Stack</h6><p><span class="badge bg-primary me-1">R</span><span class="badge bg-secondary me-1">Shiny</span><span class="badge bg-secondary me-1">shinydashboard</span><span class="badge bg-secondary">DT</span></p></div></div></div></div>
+
+    <div class="modal fade" id="modalLigue1" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Application R Shiny – Ligue 1</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>Projet R Shiny</strong> — Analyse sportive</span><h6>Contexte professionnel</h6><p>Application interactive d'analyse des performances des clubs de Ligue 1 avec R Shiny : statistiques par équipe, comparaisons saison par saison et visualisations avancées.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Collecte et nettoyage des données de Ligue 1.</li><li><i class="fas fa-check"></i> Développement de l'interface Shiny avec onglets dynamiques.</li><li><i class="fas fa-check"></i> Visualisations ggplot2 : classements, évolution de points, comparaisons.</li><li><i class="fas fa-check"></i> Intégration de tableaux interactifs avec le package DT.</li></ul><h6>Stack</h6><p><span class="badge bg-primary me-1">R</span><span class="badge bg-secondary me-1">Shiny</span><span class="badge bg-secondary me-1">ggplot2</span><span class="badge bg-secondary">DT</span></p></div></div></div></div>
+
+    <div class="modal fade" id="modalDevWeb" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Portfolio Web (HTML/CSS/Bootstrap)</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>SAÉ Développement Web</strong> — Portfolio personnel</span><h6>Contexte professionnel</h6><p>Développement d'un portfolio personnel responsive avec HTML, CSS et Bootstrap 5 : design glassmorphism, mode sombre/clair, animations AOS, intégration de particules et analytique PostHog.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Conception du design et de l'arborescence des pages.</li><li><i class="fas fa-check"></i> Développement HTML5/CSS3 responsive avec Bootstrap 5.3.</li><li><i class="fas fa-check"></i> Intégration d'animations (AOS, particles.js, data-tilt).</li><li><i class="fas fa-check"></i> Déploiement et optimisation des performances.</li></ul><h6>Stack</h6><p><span class="badge bg-warning text-dark me-1">HTML</span><span class="badge bg-secondary me-1">CSS</span><span class="badge bg-secondary me-1">Bootstrap 5</span><span class="badge bg-secondary">JavaScript</span></p></div></div></div></div>
+
+    <div class="modal fade" id="modalEstimation" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Estimation Statistique & Intervalles de Confiance</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><span class="sae-badge"><strong>Projet Statistique</strong> — Estimation & IC</span><h6>Contexte professionnel</h6><p>Estimation de paramètres de populations et construction d'intervalles de confiance en R : estimation ponctuelle, intervalles asymptotiques et bootstrap.</p><h6>Méthodologie</h6><ul><li><i class="fas fa-check"></i> Estimation ponctuelle de la moyenne, variance et proportions.</li><li><i class="fas fa-check"></i> Construction d'intervalles de confiance à différents niveaux.</li><li><i class="fas fa-check"></i> Méthode bootstrap pour les estimations non-paramétriques.</li><li><i class="fas fa-check"></i> Interprétation et visualisation des résultats.</li></ul><h6>Stack</h6><p><span class="badge bg-primary me-1">R</span><span class="badge bg-secondary me-1">Statistiques inférentielles</span><span class="badge bg-secondary me-1">Bootstrap</span><span class="badge bg-secondary">ggplot2</span></p></div></div></div></div>
+
+    <div class="modal fade terminal-modal" id="modalTerminal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terminal - Accès Recruteur</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="terminal-text" id="terminal-output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script src="scripts.js" defer></script>
+    <script>
+    // Splash screen
+    function enterPortfolio() {
+        var splash = document.getElementById('splash-screen');
+        splash.classList.add('hiding');
+        setTimeout(function() { splash.classList.add('hidden'); }, 700);
+    }
+    // Auto-hide splash on scroll
+    window.addEventListener('wheel', function onFirstScroll() {
+        enterPortfolio();
+        window.removeEventListener('wheel', onFirstScroll);
+    }, { passive: true });
+
+    // ── NAV SMOOTH SCROLL ───────────────────────────────────────────
+    document.querySelectorAll('.nav-left a[data-section], .nav-right-links a[data-section], .logo-link').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+            var href = a.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+            var target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+        });
+    });
+
+    // ── SCROLL SPY ──────────────────────────────────────────────────
+    (function() {
+        var navLinks = document.querySelectorAll('.nav-left a[data-section], .nav-right-links a[data-section]');
+        var sectionIds = Array.from(navLinks).map(function(a) { return a.getAttribute('data-section'); });
+
+        function onScroll() {
+            var scrollY = window.scrollY + window.innerHeight * 0.35;
+            var current = sectionIds[0];
+            sectionIds.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el && el.getBoundingClientRect().top + window.scrollY <= scrollY) current = id;
+            });
+            navLinks.forEach(function(a) {
+                a.classList.toggle('active', a.getAttribute('data-section') === current);
+            });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('load', onScroll);
+        onScroll();
+    })();
+
+    // Competences popup
+    document.addEventListener('DOMContentLoaded', function() {
+        var popup = document.getElementById('comp-popup');
+        var popupTitle = document.getElementById('comp-popup-title');
+        var popupBody = document.getElementById('comp-popup-body');
+        var backdrop = document.getElementById('comp-popup-backdrop');
+        var closeBtn = document.getElementById('comp-popup-close-btn');
+
+        var tabTitles = {
+            traiter: 'Traiter – Données & Pipelines',
+            analyser: 'Analyser – Statistiques & Modélisation',
+            valoriser: 'Valoriser – Dashboards & Reporting',
+            developper: 'Développer – Apps & Automatisation'
+        };
+
+        function closePopup() {
+            popup.classList.remove('open');
+            document.querySelectorAll('.matrix-card[data-tab]').forEach(function(c) { c.classList.remove('active-tab'); });
+        }
+
+        document.querySelectorAll('.matrix-card[data-tab]').forEach(function(card) {
+            card.addEventListener('click', function() {
+                var tab = card.getAttribute('data-tab');
+                var tabContent = document.querySelector('#apport-panel .apport-tab[data-panel="' + tab + '"]');
+                if (!tabContent) return;
+
+                popupTitle.textContent = tabTitles[tab] || tab;
+                popupBody.innerHTML = tabContent.querySelector('.comp-popup-grid').outerHTML;
+
+                document.querySelectorAll('.matrix-card[data-tab]').forEach(function(c) { c.classList.remove('active-tab'); });
+                card.classList.add('active-tab');
+                popup.classList.add('open');
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', closePopup);
+        if (backdrop) backdrop.addEventListener('click', closePopup);
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePopup(); });
+    });
+    </script>
+</body>
+</html>

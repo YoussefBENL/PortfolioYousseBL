@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche bilan SAE – Reporting SAS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="document">
+  <a href="index.html" class="nav-back">← Retour aux fiches</a>
+  <div class="page-header">Fiche bilan SAE – BUT2</div>
+
+  <table class="info-table">
+        <tr>
+      <td class="lb">Nom de la SAE</td>
+      <td colspan="4">Reporting statistique avec SAS</td>
+    </tr>
+  </table>
+
+  <table class="subject-table">
+    <tr>
+      <td class="lb" style="width:110px">Sujet spécifique</td>
+      <td>Production d'un rapport automatisé d'indicateurs de performance à partir de données de gestion, en langage SAS (PROC SQL, DATA steps, macro-variables).</td>
+    </tr>
+    <tr>
+      <td class="lb">Objectifs</td>
+      <td>
+        Maîtriser la syntaxe SAS (étapes DATA, PROC SQL, macro-variables).<br>
+        Filtrer, agréger et transformer des données de gestion (CAF, organismes).<br>
+        Automatiser la gestion des paramètres de dates avec des macro-variables.<br>
+        Produire des tableaux d'indicateurs de performance propres et exploitables.
+      </td>
+    </tr>
+    <tr>
+      <td class="lb">Livrables</td>
+      <td>Programme SAS, rapport d'indicateurs</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Bilan de la SAE</div>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Traiter</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="5">Apprentissages critiques sollicités</td>
+      <td>AC21.01 : Comprendre l'organisation des données de l'entreprise</td>
+    </tr>
+    <tr><td>AC21.02 : Réaliser le rôle central et spécifique de l'entrepôt de données dans la chaîne décisionnelle</td></tr>
+    <tr><td>AC21.03 : Identifier et résoudre les problèmes d'intégration de sources complémentaires et hétérogènes</td></tr>
+    <tr><td>AC21.04 : Comprendre la nécessité de tester, corriger et documenter un programme</td></tr>
+    <tr><td>AC21.05 : Apprécier l'intérêt de briques logicielles existantes et savoir les utiliser</td></tr>
+    <tr>
+      <td class="lb" rowspan="3">Composantes essentielles à respecter</td>
+      <td>Comprendre la structure des tables SAS (GCACCPMM, GCSDPMM) et leur rôle dans la chaîne de reporting.</td>
+    </tr>
+    <tr><td>Identifier et résoudre les problèmes d'intégration de données multi-sources (formats, jointures SAS).</td></tr>
+    <tr><td>Tester et documenter les programmes SAS ; exploiter les macros existantes et PROC SQL.</td></tr>
+  </table>
+
+  <table class="bilan-table">
+    <tr>
+      <td class="lb" style="width:190px">Compétence</td>
+      <td>Valoriser</td>
+    </tr>
+    <tr>
+      <td class="lb" rowspan="2">Apprentissages critiques sollicités</td>
+      <td>AC23.03 : Choisir des indicateurs pertinents pour communiquer sur les résultats</td>
+    </tr>
+    <tr><td>AC23.04 : Prendre conscience de la rigueur requise dans ses productions</td></tr>
+    <tr>
+      <td class="lb" rowspan="2">Composantes essentielles à respecter</td>
+      <td>Sélectionner les indicateurs utiles (seuils d'alerte, évolutions mensuelles).</td>
+    </tr>
+    <tr><td>Automatiser la production du rapport (macro-variables pour les dates, %let).</td></tr>
+  </table>
+
+  <div class="section-title">Ma démarche</div>
+  <table class="demarche-table">
+    <tr>
+      <th>Savoirs / connaissances</th>
+      <th>Savoir-faire</th>
+      <th>Savoir-être</th>
+    </tr>
+    <tr>
+      <td>
+        Syntaxe SAS : étapes DATA, PROC SQL, PROC FREQ.<br><br>
+        Macro-variables SAS (%let, call symput).<br><br>
+        Gestion des dates SAS (format ddmmyy, fonctions year/month).<br><br>
+        Logique de filtrage et d'agrégation de données de gestion.
+      </td>
+      <td>
+        Écrire des requêtes PROC SQL pour extraire et agréger des données.<br><br>
+        Créer des macro-variables dynamiques pour les paramètres temporels.<br><br>
+        Filtrer les données sur plusieurs années et types d'organismes.<br><br>
+        Paramétrer des seuils d'alerte (%let mv_del15 = 0.85…).
+      </td>
+      <td>
+        Rigueur dans la syntaxe (SAS ne pardonne pas les erreurs).<br><br>
+        Méthode et organisation du programme (commentaires, sections).<br><br>
+        Autonomie face aux messages d'erreur du log SAS.<br><br>
+        Précision dans la définition des indicateurs.
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">Evaluation du résultat</div>
+  <div style="margin-top:8px">
+    <div class="eval-item">
+      <p class="eval-q">Ce que je trouve bien réalisé, pourquoi ?</p>
+      <p class="eval-a">L'utilisation des macro-variables pour automatiser la gestion des dates (mois courant, mois précédent, années) est un vrai point fort : le programme s'adapte automatiquement à la date de référence la plus récente, sans avoir à modifier le code manuellement. Cela rend le rapport reproductible et maintenable.</p>
+    </div>
+    <div class="eval-item">
+      <p class="eval-q">Ce que je n'ai pas bien compris ; ce qui serait à améliorer pour une prochaine fois : pourquoi ? comment ?</p>
+      <p class="eval-a">La lecture des logs SAS et l'identification des erreurs (WARNING vs ERROR) n'est pas toujours évidente en début d'apprentissage. Pour une prochaine fois : lire systématiquement le log après chaque étape ; structurer le programme en sections claires avec des commentaires.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Eléments de preuve, ce que je peux montrer</div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 1</div>
+    <img src="img/preuve_reporting_sas_1.png" alt="Code SAS page 1" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+  <div class="preuve-block">
+    <div class="preuve-label">Preuve 2</div>
+    <img src="img/preuve_reporting_sas_2.png" alt="Code SAS page 2" style="max-width:100%;border:1px solid #ccc;display:block;">
+  </div>
+
+</div>
+</body>
+</html>
